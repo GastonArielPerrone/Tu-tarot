@@ -1,0 +1,782 @@
+[
+  {
+    "id": "MAJ00",
+    "name": "El Loco",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 0,
+    "keywords": ["Libertad", "Nuevos comienzos", "Inocencia", "Espontaneidad", "Aventura", "Fe", "Impulso"],
+    "description": "El Loco es el viajero del alma. Representa el inicio puro, sin condicionamientos. \nCamina al borde del precipicio sin miedo, movido por la confianza interna. \nEl perro blanco lo acompaña como guardián del instinto. \nSu mirada hacia arriba muestra fe en lo desconocido. \nLa flor blanca en su mano simboliza la pureza de intención. \nEs la energía del comienzo absoluto.",
+    "image_path": "./static/images/tarot/major/el-loco.png"
+  },
+  {
+    "id": "MAJ01",
+    "name": "El Mago",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 1,
+    "keywords": ["Voluntad","Acción","Manifestación","Talento","Habilidad","Enfoque","Iniciación"],
+    "description": "El Mago domina los cuatro elementos: fuego, agua, aire y tierra. \nTiene todo lo necesario para crear y manifestar. \nCon una mano señala al cielo y con la otra a la tierra:'Como es arriba, es abajo'. \nLa mesa es su altar de posibilidades. \nEl símbolo del infinito sobre su cabeza indica creatividad continua. \nEs la voluntad que convierte la idea en realidad.",
+    "image_path": "./static/images/tarot/major/el-mago.png"
+  },
+  {
+    "id": "MAJ02",
+    "name": "La Sacerdotisa",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 2,
+    "keywords": ["Intuición", "Misterio", "Sabiduría interior", "Silencio", "Subconsciente", "Secretos", "Revelaciones"],
+    "description": "Guardiana de los misterios, la Sacerdotisa se sienta entre dos columnas: lo visible y lo invisible. \nLleva un libro, la sabiduría oculta que solo revela al iniciado. \nEl velo detrás de ella es el límite entre el mundo físico y el espiritual. \nLa luna, su aliada, representa intuición profunda. \nEs la voz interior, el conocimiento silencioso, el secreto.",
+    "image_path": "./static/images/tarot/major/la-sacerdotisa.png"
+  },
+  {
+    "id": "MAJ03",
+    "name": "La Emperatriz",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 3,
+    "keywords": ["Fertilidad", "Creatividad", "Abundancia", "Maternidad", "Belleza", "Crecimiento", "Protección"],
+    "description": "La Emperatriz es la madre creadora del Tarot. \nSu trono rodeado de naturaleza simboliza fertilidad, vida, expansión. \nEl campo de trigo: abundancia material y frutos del esfuerzo. \nSu corona estrellada conecta lo terrenal con lo divino femenino. \nEncarna la belleza, la creatividad y el nacimiento de nuevas ideas. \nEs la energía de nutrir y hacer crecer.",
+    "image_path": "./static/images/tarot/major/la-emperatriz.png"
+  },
+  {
+    "id": "MAJ04",
+    "name": "El Emperador",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 4,
+    "keywords": ["Autoridad", "Orden", "Estructura", "Poder", "Estabilidad", "Disciplina", "Liderazgo"],
+    "description": "El Emperador representa autoridad, estructura y estabilidad. \nSu trono de piedra muestra bases firmes y orden. \nLa armadura que viste indica que su poder fue ganado en batalla. \nLa corona y el cetro afirman su dominio en el mundo material. \nLas montañas detrás de él hablan de determinación y disciplina. \nEs la fuerza que organiza, protege y establece límites.",
+    "image_path": "./static/images/tarot/major/el-emperador.png"
+  },
+  {
+    "id": "MAJ05",
+    "name": "El Hierofante",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 5,
+    "keywords": ["Tradición", "Enseñanza", "Guía espiritual", "Normas", "Rituales", "Aprendizaje formal", "Consejo"],
+    "description": "El Hierofante es el guardián de la tradición y el puente entre lo divino y lo humano.\nSe sienta entre dos pilares que representan la ley espiritual y la ley terrenal.\nSus manos bendicen, indicando enseñanza, guía y transmisión del conocimiento sagrado.\nLos dos acólitos a sus pies simbolizan el aprendizaje y la búsqueda de estructura.\nEs la energía de la fe, las normas y la sabiduría ancestral.",
+    "image_path": "./static/images/tarot/major/el-hierofante.png"
+  },
+  {
+    "id": "MAJ06",
+    "name": "Los Enamorados",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 6,
+    "keywords": ["Unión", "Elección", "Deseo", "Vínculo", "Valores compartidos", "Decisiones del corazón", "Armonía"],
+    "description": "Los Enamorados representan la unión, la decisión y la armonía entre dos caminos.\nLa figura angelical sobre ellos bendice la conexión del alma.\nEl hombre mira a la mujer y la mujer mira a lo divino, simbolizando el tránsito del deseo hacia la conciencia.\nLos dos árboles detrás evocan elección y responsabilidad.\nEsta carta es la energía del amor, la elección consciente y la integración.",
+    "image_path": "./static/images/tarot/major/los-enamorados.png"
+  },
+  {
+    "id": "MAJ07",
+    "name": "El Carro",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 7,
+    "keywords": ["Avance", "Triunfo", "Determinación", "Control", "Dirección", "Éxito mediante disciplina", "Movimiento"],
+    "description": "El Carro simboliza la victoria lograda mediante el control y la dirección clara.\nEl guerrero avanza erguido, protegido por una armadura espiritual.\nLas esfinges representan fuerzas opuestas que deben ser guiadas con voluntad.\nLa estrella en su corona indica inspiración superior.\nEs la energía del avance, la determinación y el dominio personal.",
+    "image_path": "./static/images/tarot/major/el-carro.png"
+  },
+  {
+    "id": "MAJ08",
+    "name": "La Fuerza",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 8,
+    "keywords": ["Valentía", "Autocontrol", "Compasión", "Fortaleza interior", "Templanza emocional", "Dominio suave", "Resiliencia"],
+    "description": "La Fuerza muestra la delicadeza que vence a la bestia interior.\nLa mujer abre las fauces del león sin violencia, solo con calma y compasión.\nEl símbolo del infinito sobre su cabeza revela control espiritual constante.\nLa escena transmite dominio sereno, valentía y autocontrol.\nEs la energía de la fortaleza interior, la suavidad poderosa y la resiliencia.",
+    "image_path": "./static/images/tarot/major/la-fuerza.png"
+  },
+  {
+    "id": "MAJ09",
+    "name": "El Ermitaño",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 9,
+    "keywords": ["Introspección", "Búsqueda interior", "Soledad voluntaria", "Guía", "Sabiduría", "Detenimiento", "Reflexión profunda"],
+    "description": "El Ermitaño es el sabio que se retira para encontrar la verdad interior.\nSu linterna ilumina el camino en la oscuridad, representando la guía espiritual.\nEl bastón simboliza la experiencia que sostiene al buscador.\nLa montaña detrás indica la cima alcanzada mediante introspección.\nEs la energía de la búsqueda, la sabiduría silenciosa y la reflexión profunda.",
+    "image_path": "./static/images/tarot/major/el-ermitaño.png"
+  },
+  {
+    "id": "MAJ10",
+    "name": "La Rueda de la Fortuna",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 10,
+    "keywords": ["Destino", "Ciclos", "Cambio", "Oportunidad", "Suerte", "Karma", "Evolución"],
+    "description": "La Rueda de la Fortuna simboliza los ciclos inevitables de la vida.\nLa rueda gira sin detenerse, recordando que nada es permanente.\nLas criaturas que la rodean representan el aprendizaje en cada cambio.\nEn la cima, la esfinge guarda el misterio del destino.\nEs la energía del movimiento, el giro del karma y las oportunidades que aparecen sin aviso.",
+    "image_path": "./static/images/tarot/major/la-rueda-de-la-fortuna.png"
+  },
+  {
+    "id": "MAJ11",
+    "name": "La Justicia",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 11,
+    "keywords": ["Equilibrio", "Responsabilidad", "Justicia", "Verdad", "Decisión", "Imparcialidad", "Ley"],
+    "description": "La Justicia equilibra aquello que debe ser visto con claridad.\nSostiene una espada recta, símbolo de verdad y decisión.\nLa balanza en su mano izquierda pesa causas y consecuencias.\nSe sienta entre pilares que representan la imparcialidad.\nEs la energía del equilibrio, la responsabilidad y las decisiones justas.",
+    "image_path": "./static/images/tarot/major/la-justicia.png"
+  },
+  {
+    "id": "MAJ12",
+    "name": "El Colgado",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 12,
+    "keywords": ["Sacrificio", "Pausa", "Rendición", "Nueva perspectiva", "Desapego", "Iluminación interna", "Espera consciente"],
+    "description": "El Colgado representa la pausa sagrada y el cambio de perspectiva.\nCuelga boca abajo voluntariamente, entregándose al proceso interior.\nLa aureola dorada alrededor de su cabeza revela iluminación y comprensión profunda.\nSu postura tranquila indica aceptación y renuncia consciente.\nEs la energía del sacrificio transformador, la espera y la visión renovada.",
+    "image_path": "./static/images/tarot/major/el-colgado.png"
+  },
+  {
+    "id": "MAJ13",
+    "name": "La Muerte",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 13,
+    "keywords": ["Transformación", "Cierre", "Renacimiento", "Fin de ciclo", "Cambio profundo", "Liberación", "Transición"],
+    "description": "La Muerte es la transformación absoluta que libera lo viejo.\nEl esqueleto montado avanza con firmeza, simbolizando lo inevitable del cambio.\nLas figuras a sus pies representan aquello que debe dejarse atrás.\nEl sol que nace en el horizonte anuncia renacimiento y renovación.\nEs la energía del cierre, la purificación y los nuevos comienzos.",
+    "image_path": "./static/images/tarot/major/la-muerte.png"
+  },
+  {
+    "id": "MAJ14",
+    "name": "La Templanza",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 14,
+    "keywords": ["Equilibrio", "Armonía", "Moderación", "Sanación", "Paciencia", "Mezcla de opuestos", "Fluidez"],
+    "description": "La Templanza representa armonía, moderación, sanación y equilibrio espiritual. El ángel que mezcla dos copas simboliza la integración de opuestos y el flujo perfecto de energías. Un pie en la tierra y otro en el agua expresa el balance entre lo material y lo emocional. Es una carta de paciencia, adaptación y transformación suave.",
+    "image_path": "./static/images/tarot/major/la-templanza.png"
+  },
+  {
+    "id": "MAJ15",
+    "name": "El Diablo",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 15,
+    "keywords": ["Tentación", "Ataduras", "Dependencia", "Obsesión", "Materialismo", "Sombra", "Engaños propios"],
+    "description": "El Diablo simboliza ataduras, deseos intensos, tentación y falta de control. Las figuras encadenadas representan limitaciones autoimpuestas o dependencias. El diablo mismo encarna la parte más instintiva, impulsiva o material del ser humano. Es una carta que revela sombras, obsesiones, manipulación o seducciones que esclavizan, pero también invita a liberarse.",
+    "image_path": "./static/images/tarot/major/el-diablo.png"
+  },
+  {
+    "id": "MAJ16",
+    "name": "La Torre",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 16,
+    "keywords": ["Ruptura", "Crisis", "Revelación", "Destrucción de estructuras", "Shock", "Liberación", "Cambio inevitable"],
+    "description": "La Torre representa ruptura, revelación y cambio repentino. El rayo que golpea la torre simboliza la verdad que irrumpe destruyendo estructuras falsas o inestables. Las figuras cayendo muestran la pérdida de control, la caída del ego o de algo que parecía seguro. Es un símbolo de crisis liberadora y reconstrucción sobre bases auténticas.",
+    "image_path": "./static/images/tarot/major/la-torre.png"
+  },
+  {
+    "id": "MAJ17",
+    "name": "La Estrella",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 17,
+    "keywords": ["Esperanza", "Fe", "Inspiración", "Guía", "Serenidad", "Renovación", "Claridad espiritual"],
+    "description": "La Estrella es esperanza, inspiración y claridad espiritual. La figura vertiendo agua nutre tanto la tierra como el mundo emocional, lo que representa renovación y conexión con lo divino. Las estrellas brillantes simbolizan guía y fe en el futuro. Es una carta de paz, creatividad y sanación interior.",
+    "image_path": "./static/images/tarot/major/la-estrella.png"
+  },
+  {
+    "id": "MAJ18",
+    "name": "La Luna",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 18,
+    "keywords": ["Intuición", "Ilusión", "Miedo", "Confusión", "Sueños", "Misterio", "Inconsciente"],
+    "description": "La Luna simboliza intuición, sueños, engaños y emociones profundas. El camino sinuoso representa la travesía por lo desconocido. Los animales y la figura lunar evocan impulsos internos, miedos, confusiones o ilusiones. Es una carta que habla de percepción intuitiva, ciclos emocionales y necesidad de claridad.",
+    "image_path": "./static/images/tarot/major/la-luna.png"
+  },
+  {
+    "id": "MAJ19",
+    "name": "El Sol",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 19,
+    "keywords": ["Éxito", "Alegría", "Vitalidad", "Claridad", "Triunfo", "Crecimiento", "Energía positiva"],
+    "description": "El Sol representa alegría, vitalidad, éxito y realización. El niño montado en un caballo blanco simboliza inocencia, libertad y verdad. El sol brillante disipa sombras, revelando claridad absoluta. Es una carta de logros, entusiasmo y renacimiento optimista.",
+    "image_path": "./static/images/tarot/major/el-sol.png"
+  },
+  {
+    "id": "MAJ20",
+    "name": "El Juicio Final",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 20,
+    "keywords": ["Despertar", "Renacimiento", "Evaluación", "Karma", "Decisión final", "Llamado interior", "Claridad espiritual"],
+    "description": "El Juicio simboliza renovación, renacimiento y despertar espiritual. El ángel tocando la trompeta llama a un proceso de evaluación profunda. Las figuras que emergen de sus tumbas representan dejar atrás lo viejo y comprender el propósito personal. Es una carta de decisiones trascendentales, perdón y cambio definitivo de rumbo.",
+    "image_path": "./static/images/tarot/major/el-juicio.png"
+  },
+  {
+    "id": "MAJ21",
+    "name": "El Mundo",
+    "arcana": "Mayor",
+    "suit": null,
+    "number": 21,
+    "keywords": ["Completación", "Integración", "Realización", "Plenitud", "Cierre de ciclo", "Expansión", "Armonía total"],
+    "description": "El Mundo es culminación, logro, integración y totalidad. La figura danzando dentro de una corona simboliza plenitud y armonía. Los cuatro seres en las esquinas representan los elementos, la estabilidad y la expansión. Es una carta de cierre exitoso, realización, entendimiento global y comienzo de un nuevo ciclo.",
+    "image_path": "./static/images/tarot/major/el-mundo.png"
+  },
+  {
+    "id": "MIN_bastos_01",
+    "name": "As de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 1,
+    "keywords": ["Inicio", "Energía vital", "Creatividad", "Inspiración", "Impulso", "Nuevos proyectos", "Motivación"],
+    "description": "El As de Bastos representa el fuego primordial: el inicio, la chispa creadora que enciende un nuevo camino. La mano que emerge de la nube ofrece un basto vivo y floreciente, símbolo de energía pura, oportunidades creativas y fuerza espiritual. Es el impulso inicial que invita a actuar con valentía, a emprender proyectos con pasión y a confiar en el instinto. Su presencia suele anunciar nacimientos de ideas, inicios inspirados y un llamado profundo a moverse hacia adelante.",
+    "image_path": "./static/images/tarot/minor/bastos/as-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_02",
+    "name": "Dos de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 2,
+    "keywords": ["Visión", "Planificación", "Decisión", "Estrategia", "Ambición", "Futuro", "Expansión"],
+    "description": "El Dos de Bastos muestra la planificación previa al movimiento. El personaje sostiene un basto mientras observa el horizonte desde una altura, con el mundo en sus manos. Esto simboliza visión, estrategia y reflexión antes de actuar. Expresa la capacidad de evaluar posibilidades, expandir fronteras y tomar decisiones importantes. Es la carta de la perspectiva, del diseño de un plan, del deseo de avanzar más allá de los límites conocidos.",
+    "image_path": "./static/images/tarot/minor/bastos/dos-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_03",
+    "name": "Tres de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 3,
+    "keywords": ["Progreso", "Expansión", "Crecimiento", "Oportunidades", "Movimiento", "Confianza", "Resultados iniciales"],
+    "description": "El Tres de Bastos habla del progreso que nace después de haber tomado una decisión acertada. El personaje mira hacia el mar mientras observa llegar o partir embarcaciones: símbolos de comercio, movimiento, oportunidades y expansión exitosa. Representa los frutos iniciales de un plan, el crecimiento constante y la llegada de nuevas posibilidades desde el exterior. Es una carta de confianza, expectativa positiva y avance sostenido.",
+    "image_path": "./static/images/tarot/minor/bastos/tres-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_04",
+    "name": "Cuatro de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 4,
+    "keywords": ["Estabilidad", "Celebración", "Armonía", "Logro", "Comunidad", "Equilibrio", "Descanso"],
+    "description": "El Cuatro de Bastos es una carta profundamente armoniosa que celebra la estabilidad lograda gracias al esfuerzo previo. Las cuatro varas forman un portal decorado con flores, símbolo de unión, equilibrio y victoria compartida. En el fondo, la gente celebra, indicando alegría, comunidad y la culminación de una etapa positiva. Esta carta habla de momentos de descanso, festejos importantes, logros familiares o de grupo, y del sentimiento de haber alcanzado un punto seguro y firme sobre el cual construir. Representa un hito que merece ser honrado.",
+    "image_path": "./static/images/tarot/minor/bastos/cuatro-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_05",
+    "name": "Cinco de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 5,
+    "keywords": ["Conflicto", "Competencia", "Desafíos", "Retos", "Disputa", "Caos creativo", "Fricción necesaria"],
+    "description": "El Cinco de Bastos simboliza el conflicto que surge naturalmente cuando las energías chocan. Las figuras en la carta levantan sus bastos de manera desorganizada, mostrando competencia, retos, disputas, diversidad de opiniones e incluso caos creativo. Esta carta no siempre habla de pleitos destructivos: también puede indicar práctica, debate, entrenamiento o la excitación del desafío. Representa un momento de fricción necesario para crecer, fortalecer habilidades o aclarar direcciones.",
+    "image_path": "./static/images/tarot/minor/bastos/cinco-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_06",
+    "name": "Seis de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 6,
+    "keywords": ["Triunfo","Reconocimiento","Éxito","Avance","Buenas noticias"],
+    "description": "El Seis de Bastos representa la victoria después del esfuerzo, el reconocimiento público y el orgullo sano por los logros obtenidos. El jinete que avanza montado en su caballo simboliza el triunfo personal y social; la corona de laurel es emblema de éxito, gloria y validación. Es una carta que anuncia buenas noticias, metas cumplidas y avance seguro. \nEn resumen, carta de victoria, reconocimiento y éxito ganado con esfuerzo. Simboliza alcanzar metas, recibir apoyo y avanzar con confianza después de superar desafíos.",
+    "image_path": "./static/images/tarot/minor/bastos/seis-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_07",
+    "name": "Siete de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 7,
+    "keywords": ["Resistencia","Defensa","Competencia","Perseverancia","Firmeza"],
+    "description": "El Siete de Bastos simboliza defensa, resistencia y firmeza ante desafíos. La figura principal está en una posición más alta, lo que representa ventaja moral o estratégica. Es una carta de lucha persistente, de mantener la postura propia a pesar de la presión externa. Indica competencia, valentía y la necesidad de proteger lo logrado. \nEn resumen, simboliza defensa del territorio personal, competencia y perseverancia. Habla de mantenerse firme ante obstáculos y defender convicciones con valentía.",
+    "image_path": "./static/images/tarot/minor/bastos/siete-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_08",
+    "name": "Ocho de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 8,
+    "keywords": ["Rapidez","Comunicación","Avance","Fluidez","Movimiento"],
+    "description": "El Ocho de Bastos representa movimiento rápido, comunicación y progreso acelerado. Los bastos volando por el aire simbolizan velocidad, mensajes que llegan, viajes y resolución ágil de asuntos pendientes. Es una carta dinámica, sin bloqueos, que habla de fluidez y avance sin interrupciones. \nEn resumen, carta de movimiento veloz, comunicaciones claras y progreso rápido. Indica avances inesperados, fluidez en proyectos y resolución ágil de situaciones.",
+    "image_path": "./static/images/tarot/minor/bastos/ocho-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_09",
+    "name": "Nueve de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 9,
+    "keywords": ["Resistencia","Vigilancia","Resiliencia","Fortaleza","Prevención"],
+    "description": "El Nueve de Bastos representa resiliencia, cautela y última etapa antes de completar un objetivo. La figura herida pero firme simboliza la perseverancia pese al desgaste. Esta carta muestra experiencia, aprendizajes duramente obtenidos y la determinación para no rendirse. Habla de resistencia final antes de la victoria. \nEn resumen, simboliza resistencia, cautela y determinación para continuar a pesar del cansancio. Representa la última prueba antes de la meta y la capacidad de persistir.",
+    "image_path": "./static/images/tarot/minor/bastos/nueve-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_10",
+    "name": "Diez de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 10,
+    "keywords": ["Carga","Responsabilidad","Agotamiento","Esfuerzo","Delegar","Exceso","Estrés"],
+    "description": "El Diez de Bastos simboliza carga, responsabilidad excesiva y agotamiento por asumir demasiado. La figura que lleva los diez bastos representa el peso de obligaciones acumuladas y la necesidad de delegar. Es una carta que advierte sobre el estrés y el exceso de trabajo, pero también indica el final de un ciclo donde pronto se liberará la carga. \nEn resumen, carta de carga pesada, responsabilidades acumuladas y agotamiento. Indica esfuerzo extremo, necesidad de delegar y finalización cercana de un ciclo exigente.",
+    "image_path": "./static/images/tarot/minor/bastos/diez-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_11",
+    "name": "Paje de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 11,
+    "keywords": ["Nuevos comienzos","Entusiasmo","Creatividad","Mensajes","Exploración","Juventud","Potencial"],
+    "description": "El Paje de Bastos representa el inicio de una energía creativa, la chispa juvenil que impulsa a explorar nuevos caminos. Este mensajero sostiene un basto florido, símbolo de ideas frescas, entusiasmo y curiosidad. El desierto a su alrededor muestra un entorno aún no desarrollado, indicando que el potencial está, pero depende del consultante cultivarlo. Su vestimenta llamativa refleja espontaneidad, impulso y deseo de descubrimiento.",
+    "image_path": "./static/images/tarot/minor/bastos/paje-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_12",
+    "name": "Caballo de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 12,
+    "keywords": ["Acción","Impulso","Movimiento","Valentía","Ambición","Determinación","Riesgos", "Pasión"],
+    "description": "El Caballo de Bastos es pura acción, impulso y movimiento. Representa avanzar sin miedo, perseguir metas con pasión y asumir riesgos. El caballo en movimiento indica viajes o mudanzas, mientras que el basto erguido simboliza una energía ardiente que busca conquistar nuevos territorios. Esta carta habla de valentía, ambición y determinación.",
+    "image_path": "./static/images/tarot/minor/bastos/caballo-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_13",
+    "name": "Reina de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 13,
+    "keywords": ["Confianza","Carisma","Liderazgo","Creatividad","Fuerza","Intuición","Protección"],
+    "description": "La Reina de Bastos encarna la fuerza femenina activa, la creatividad madura y el liderazgo cálido. Su trono adornado con leones simboliza determinación y autoridad, mientras que el girasol representa vitalidad y crecimiento. Conecta la energía espiritual del fuego con la compasión, mostrando una personalidad segura, magnética y protectora.",
+    "image_path": "./static/images/tarot/minor/bastos/reina-de-bastos.png"
+  },
+  {
+    "id": "MIN_bastos_14",
+    "name": "Rey de Bastos",
+    "arcana": "Menor",
+    "suit": "Bastos",
+    "number": 14,
+    "keywords": ["Autoridad","Visión","Liderazgo","Estrategia","Poder","Determinación","Madurez", "Inspiración"],
+    "description": "El Rey de Bastos representa el dominio total de la energía del fuego: autoridad, visión y liderazgo estratégico. Su postura firme y el basto florecido muestran un poder que no es impulsivo, sino maduro y orientado al futuro. Es un líder natural, alguien que inspira y guía con determinación, seguridad y visión clara.",
+    "image_path": "./static/images/tarot/minor/bastos/rey-de-bastos.png"
+  },
+  {
+    "id": "MIN_copas_01",
+    "name": "As de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 1,
+    "keywords": ["amor divino", "emociones puras", "nacimiento emocional", "bendición"],
+    "description": "Una gran copa rebosante sostenida por una mano divina simboliza el amor puro, bendiciones espirituales y la fuente universal de emociones. El agua desbordante representa sentimientos abundantes y la paloma sugiere paz y gracia divina.",
+    "image_path": "./static/images/tarot/minor/copas/as-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_02",
+    "name": "Dos de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 2,
+    "keywords": ["unión", "alianza", "equilibrio", "conexión"],
+    "description": "Dos figuras intercambiando copas representan la unión armoniosa. El caduceo entre ellos simboliza equilibrio, sanación y acuerdos. El león alado refleja pasión transformada en cooperación.",
+    "image_path": "./static/images/tarot/minor/copas/dos-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_03",
+    "name": "Tres de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 3,
+    "keywords": ["celebración", "comunidad", "alegría", "unión social"],
+    "description": "Tres mujeres brindando con copas simbolizan celebración, comunidad y apoyo mutuo. La cosecha a sus pies refleja abundancia emocional y frutos compartidos.",
+    "image_path": "./static/images/tarot/minor/copas/tres-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_04",
+    "name": "Cuatro de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 4,
+    "keywords": ["introspección", "apatía", "desconexión", "rechazo"],
+    "description": "Un joven pensativo ignora una copa que le ofrece una mano mística. Esto simboliza desconexión emocional y falta de percepción. Las tres copas en el suelo representan lo conocido y la oportunidad celeste ignorada.",
+    "image_path": "./static/images/tarot/minor/copas/cuatro-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_05",
+    "name": "Cinco de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 5,
+    "keywords": ["pérdida", "duelo", "esperanza", "renovación"],
+    "description": "Una figura oscura llora por tres copas caidas, simbolo de perdida y duelo. Detras, dos copas en pie indican que aun queda esperanza. El puente y el rio señalan el paso hacia una renovacion emocional.",
+    "image_path": "./static/images/tarot/minor/copas/cinco-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_06",
+    "name": "Seis de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 6,
+    "keywords": ["inocencia", "recuerdos", "armonía", "seguridad emocional"],
+    "description": "Dos niños intercambiando copas llenas de flores representan inocencia, recuerdos felices y armonia del pasado. El jardín cerrado simboliza seguridad emocional y memoria pura.",
+    "image_path": "./static/images/tarot/minor/copas/seis-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_07",
+    "name": "Siete de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 7,
+    "keywords": ["deseos", "fantasias", "ilusiones", "falta de claridad"],
+    "description": "Siete copas flotan llenas de imagenes tentadoras y confusas. Representan deseos, fantasias, ilusiones y el riesgo de elegir con falta de claridad.",
+    "image_path": "./static/images/tarot/minor/copas/siete-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_08",
+    "name": "Ocho de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 8,
+    "keywords": ["abandono", "búsqueda", "cambio interno", "transición"],
+    "description": "Un viajero se aleja de ocho copas ordenadas pero incompletas, simbolizando la búsqueda de un camino más significativo. La luna creciente indica intuición y paso hacia lo desconocido.",
+    "image_path": "./static/images/tarot/minor/copas/ocho-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_09",
+    "name": "Nueve de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 9,
+    "keywords": ["logro emocional", "deseos cumplidos", "plenitud interna"],
+    "description": "Un hombre satisfecho posa ante nueve copas exhibidas como trofeos, simbolo de logro emocional, deseos cumplidos y plenitud interna.",
+    "image_path": "./static/images/tarot/minor/copas/nueve-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_10",
+    "name": "Diez de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 10,
+    "keywords": ["felicidad plena", "unión familiar", "paz emocional", "armonía"],
+    "description": "Una pareja bajo un arco iris de diez copas simboliza felicidad plena, unión familiar y paz emocional. El arco iris representa bendicion divina y plenitud afectiva.",
+    "image_path": "./static/images/tarot/minor/copas/diez-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_11",
+    "name": "Paje de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 11,
+    "keywords": ["intuición", "mensaje", "creatividad", "sensibilidad"],
+    "description": "Un joven sostiene una copa de la que surge un pez, simbolizando intuicion sorpresiva, mensajes emocionales y creatividad inesperada. El mar en calma representa sensibilidad y receptividad.",
+    "image_path": "./static/images/tarot/minor/copas/paje-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_12",
+    "name": "Caballo de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 12,
+    "keywords": ["romance", "propuesta", "idealismo", "movimiento"],
+    "description": "El caballero avanza con una copa elevada, simbolizando nobleza emocional, propuestas sinceras y movimiento romántico. Su caballo tranquilo indica control y suavidad.",
+    "image_path": "./static/images/tarot/minor/copas/caballo-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_13",
+    "name": "Reina de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 13,
+    "keywords": ["introspección", "empatía", "intuición", "sabiduría emocional"],
+    "description": "Sentada frente al mar, sostiene una copa ritual cerrada, símbolo de misterios emocionales, intuición profunda y compasión. Su trono adornado con motivos marinos conecta con el inconsciente.",
+    "image_path": "./static/images/tarot/minor/copas/reina-de-copas.png"
+  },
+  {
+    "id": "MIN_copas_14",
+    "name": "Rey de Copas",
+    "arcana": "Menor",
+    "suit": "Copas",
+    "number": 14,
+    "keywords": ["equilibrio", "madurez emocional", "diplomacia", "sabiduría"],
+    "description": "El rey se sienta sobre un trono rodeado de aguas agitadas pero permanece sereno, simbolizando control emocional. Su copa y cetro representan autoridad equilibrada y compasión madura.",
+    "image_path": "./static/images/tarot/minor/copas/rey-de-copas.png"
+  },
+  {
+    "id": "MIN_espadas_01",
+    "name": "As de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 1,
+    "keywords": ["verdad", "claridad", "decisión", "justicia", "mente", "nuevo comienzo"],
+    "description": "Una mano surge de las nubes sosteniendo una espada vertical. La hoja atraviesa una corona rodeada de laureles. Representa una verdad que irrumpe con fuerza, claridad mental repentina y el poder del pensamiento racional que corta la confusión.",
+    "image_path": "./static/images/tarot/minor/espadas/as-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_02",
+    "name": "Dos de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 2,
+    "keywords": ["indecisión", "bloqueo", "negación", "equilibrio tenso", "evitación"],
+    "description": "Una mujer con los ojos vendados sostiene dos espadas cruzadas frente a su pecho. Está sentada frente al mar en calma. Simboliza la negación consciente, el bloqueo emocional y la dificultad para elegir entre dos caminos.",
+    "image_path": "./static/images/tarot/minor/espadas/dos-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_03",
+    "name": "Tres de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 3,
+    "keywords": ["dolor", "ruptura", "traición", "pena", "verdad dolorosa"],
+    "description": "Un corazón es atravesado por tres espadas bajo un cielo gris y lluvioso. La imagen expresa dolor emocional, traición y verdades que hieren profundamente.",
+    "image_path": "./static/images/tarot/minor/espadas/tres-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_04",
+    "name": "Cuatro de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 4,
+    "keywords": ["descanso", "pausa", "recuperación", "meditación", "sanación"],
+    "description": "Un caballero yace descansando sobre una tumba, con tres espadas colgadas y una debajo. Representa retiro, pausa necesaria y recuperación tras un conflicto mental o emocional.",
+    "image_path": "./static/images/tarot/minor/espadas/cuatro-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_05",
+    "name": "Cinco de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 5,
+    "keywords": ["conflicto", "ego", "derrota moral", "tensión", "pérdida"],
+    "description": "Un personaje recoge espadas mientras otros se alejan derrotados. El cielo es tenso. Simboliza conflictos donde alguien gana pero a costa de perder relaciones o valores.",
+    "image_path": "./static/images/tarot/minor/espadas/cinco-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_06",
+    "name": "Seis de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 6,
+    "keywords": ["cambio", "transición", "alejamiento", "sanación", "progreso"],
+    "description": "Una barca cruza aguas tranquilas llevando personas y espadas. Representa un viaje mental o emocional, dejando atrás dificultades para buscar calma y claridad.",
+    "image_path": "./static/images/tarot/minor/espadas/seis-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_07",
+    "name": "Siete de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 7,
+    "keywords": ["engaño", "mentira", "astucia", "secretos", "evasión", "traición"],
+    "description": "Una figura huye sigilosamente cargando espadas mientras mira hacia atrás. La escena habla de engaños, estrategias ocultas o acciones realizadas sin asumir consecuencias.",
+    "image_path": "./static/images/tarot/minor/espadas/siete-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_08",
+    "name": "Ocho de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 8,
+    "keywords": ["limitación", "miedo", "bloqueo mental", "victimismo", "confusión"],
+    "description": "Una mujer vendada y atada se encuentra rodeada de espadas clavadas en el suelo. Aunque parece atrapada, el encierro es principalmente mental.",
+    "image_path": "./static/images/tarot/minor/espadas/ocho-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_09",
+    "name": "Nueve de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 9,
+    "keywords": ["ansiedad", "culpa", "insomnio", "miedo", "preocupación"],
+    "description": "Una persona se despierta sobresaltada en la noche, con la cabeza entre las manos. Las espadas flotan sobre ella. Representa ansiedad, culpa y tormento mental.",
+    "image_path": "./static/images/tarot/minor/espadas/nueve-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_10",
+    "name": "Diez de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 10,
+    "keywords": ["final", "derrota", "colapso", "traición", "renacimiento"],
+    "description": "Un cuerpo yace en el suelo con diez espadas clavadas en la espalda. El amanecer asoma en el horizonte. Simboliza un final doloroso pero definitivo que da paso a un nuevo comienzo.",
+    "image_path": "./static/images/tarot/minor/espadas/diez-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_11",
+    "name": "Paje de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 11,
+    "keywords": ["curiosidad", "aprendizaje", "comunicación", "alerta", "ideas"],
+    "description": "Un joven sostiene una espada observando atentamente el entorno. Representa curiosidad, aprendizaje y vigilancia mental.",
+    "image_path": "./static/images/tarot/minor/espadas/paje-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_12",
+    "name": "Caballo de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 12,
+    "keywords": ["impulsividad", "acción", "conflicto", "determinación", "prisa"],
+    "description": "Un caballero avanza a toda velocidad con la espada en alto. El viento agita todo a su paso. Simboliza acción impulsiva, ideas defendidas con vehemencia.",
+    "image_path": "./static/images/tarot/minor/espadas/caballo-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_13",
+    "name": "Reina de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 13,
+    "keywords": ["claridad", "honestidad", "lógica", "sabiduría", "objetividad"],
+    "description": "Una reina sostiene su espada con firmeza mientras observa con serenidad. Representa objetividad, verdad y claridad emocional tras el dolor.",
+    "image_path": "./static/images/tarot/minor/espadas/reina-de-espadas.png"
+  },
+  {
+    "id": "MIN_espadas_14",
+    "name": "Rey de Espadas",
+    "arcana": "Menor",
+    "suit": "Espadas",
+    "number": 14,
+    "keywords": ["autoridad", "justicia", "razón", "intelecto", "dominio", "liderazgo", "razón"],
+    "description": "Un rey firme en su trono con la espada como símbolo de autoridad. Representa liderazgo intelectual, justicia y dominio de la razón.",
+    "image_path": "./static/images/tarot/minor/espadas/rey-de-espadas.png"
+  },
+  {
+    "id": "MIN_oros_01",
+    "name": "As de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 1,
+    "keywords": ["oportunidad", "prosperidad", "nuevo comienzo", "estabilidad"],
+    "description": "Una mano ofrece una moneda dorada en un jardín fértil. Representa una oportunidad concreta de crecimiento material o estabilidad.",
+    "image_path": "./static/images/tarot/minor/oros/as-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_02",
+    "name": "Dos de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 2,
+    "keywords": ["equilibrio", "adaptación", "prioridades", "flexibilidad"],
+    "description": "Una figura equilibra dos monedas en movimiento. Simboliza la necesidad de adaptarse y administrar recursos con flexibilidad.",
+    "image_path": "./static/images/tarot/minor/oros/dos-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_03",
+    "name": "Tres de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 3,
+    "keywords": ["colaboración", "aprendizaje", "progreso", "esfuerzo compartido"],
+    "description": "Personas colaboran en una construcción. Representa trabajo en equipo, aprendizaje y reconocimiento del esfuerzo.",
+    "image_path": "./static/images/tarot/minor/oros/tres-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_04",
+    "name": "Cuatro de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 4,
+    "keywords": ["apego", "control", "avaricia", "seguridad"],
+    "description": "Una figura se aferra a sus monedas. Simboliza miedo a perder, apego excesivo y control material.",
+    "image_path": "./static/images/tarot/minor/oros/cuatro-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_05",
+    "name": "Cinco de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 5,
+    "keywords": ["crisis", "escasez", "soledad", "rechazo"],
+    "description": "Dos personas caminan en la pobreza frente a un templo iluminado. Representa escasez material y sensación de abandono.",
+    "image_path": "./static/images/tarot/minor/oros/cinco-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_06",
+    "name": "Seis de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 6,
+    "keywords": ["generosidad", "ayuda", "equilibrio", "justicia"],
+    "description": "Un personaje reparte monedas con balanza en mano. Simboliza justicia, ayuda y equilibrio entre dar y recibir.",
+    "image_path": "./static/images/tarot/minor/oros/seis-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_07",
+    "name": "Siete de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 7,
+    "keywords": ["paciencia", "evaluación", "inversión", "espera"],
+    "description": "Una persona observa su cultivo crecer. Representa paciencia, evaluación y espera de resultados.",
+    "image_path": "./static/images/tarot/minor/oros/siete-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_08",
+    "name": "Ocho de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 8,
+    "keywords": ["disciplina", "trabajo", "aprendizaje", "perfeccionamiento"],
+    "description": "Un artesano trabaja concentrado. Simboliza dedicación, esfuerzo constante y perfeccionamiento.",
+    "image_path": "./static/images/tarot/minor/oros/ocho-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_09",
+    "name": "Nueve de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 9,
+    "keywords": ["autosuficiencia", "lujo", "logro", "bienestar"],
+    "description": "Una figura disfruta de su abundancia en soledad. Representa independencia, logro personal y bienestar.",
+    "image_path": "./static/images/tarot/minor/oros/nueve-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_10",
+    "name": "Diez de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 10,
+    "keywords": ["abundancia", "familia", "legado", "estabilidad", "seguridad", "riqueza", "prosperidad"],
+    "description": "Una familia rodeada de símbolos de riqueza. Representa estabilidad, legado y seguridad a largo plazo.",
+    "image_path": "./static/images/tarot/minor/oros/diez-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_11",
+    "name": "Paje de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 11,
+    "keywords": ["aprendizaje", "proyecto", "oportunidad", "juventud"],
+    "description": "Un joven contempla una moneda con atención. Representa el inicio de un aprendizaje o proyecto concreto.",
+    "image_path": "./static/images/tarot/minor/oros/paje-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_12",
+    "name": "Caballo de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 12,
+    "keywords": ["constancia", "responsabilidad", "perseverancia", "progreso seguro"],
+    "description": "Un jinete avanza lentamente pero con firmeza. Simboliza constancia, responsabilidad y progreso seguro.",
+    "image_path": "./static/images/tarot/minor/oros/caballo-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_13",
+    "name": "Reina de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 13,
+    "keywords": ["cuidado", "hogar", "prosperidad", "abundancia"],
+    "description": "Una figura maternal sostiene la moneda con cuidado. Representa abundancia, protección y bienestar material.",
+    "image_path": "./static/images/tarot/minor/oros/reina-de-oros.png"
+  },
+  {
+    "id": "MIN_oros_14",
+    "name": "Rey de Oros",
+    "arcana": "Menor",
+    "suit": "Oros",
+    "number": 14,
+    "keywords": ["riqueza", "liderazgo", "estabilidad", "negocios"],
+    "description": "Un rey rodeado de riqueza y estabilidad. Representa éxito financiero, liderazgo y seguridad material.",
+    "image_path": "./static/images/tarot/minor/oros/rey-de-oros.png"
+  }
+]
