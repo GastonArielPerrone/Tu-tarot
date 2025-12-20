@@ -78,6 +78,11 @@ main {
     overflow-x: hidden;
 }
 
+section ul li {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
 /* Sliders */
 .container-slider {
     display: flex;
@@ -286,8 +291,35 @@ footer {
     text-align: center;
     margin-top: auto;
 }
+
 footer p {
     color: var(--text-color);
     font-size: 1.2rem;
     margin: 0;
+}
+
+/* Nuestras Cartas */
+
+.main-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--slide-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--header-box-shadow);
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
