@@ -21,6 +21,7 @@
 
 body {
     font-family: var(--font-family);
+    cursor: url("../static/images/content/pointer/pointer-move.png") 16 16, auto;
     margin: 0;
     padding: 0;
     background-image: url('../static/images/content/background-image.jpg');
@@ -30,6 +31,14 @@ body {
     color: var(--text-color);
     font-size: 62.5%;
     overflow-x: hidden;
+}
+
+a:hover, button:hover, input:hover, textarea:hover, div[class="buttons"] label:hover {
+    cursor: url("../static/images/content/pointer/pointer-hover.png") 16 16, pointer;
+}
+
+a:active, button:active , input:active, textarea:active, div[class="buttons"] label:active {
+    cursor: url("../static/images/content/pointer/pointer-click.png") 16 16, pointer;
 }
 
 /* header */
