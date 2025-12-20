@@ -101,6 +101,10 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+nav ul li a:active {
+    color: var(--button-hover);
+}
+
 /* Main content */
 main {
     padding: 0;
@@ -355,4 +359,83 @@ footer p {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+/* Forzar diseño de escritorio en todos los dispositivos
+   Esto mantiene la misma apariencia que en PC (nav en fila, sliders 4x, tamaños fijos). */
+
+body {
+    font-size: 62.5% !important;
+}
+
+.header-flex {
+    padding: 20px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.logo {
+    height: 80px !important;
+}
+
+nav ul {
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 15px !important;
+    display: flex !important;
+    gap: 20px !important;
+    flex-direction: row !important;
+}
+
+nav ul li a {
+    color: var(--text-color) !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 40px !important;
+}
+
+/* Restaurar hover amarillo en el nav */
+nav ul li a:hover {
+    color: var(--primary-color) !important;
+}
+
+.slider {
+    height: 75vh !important;
+}
+
+.slide-title {
+    bottom: 120px !important;
+    font-size: 2.2rem !important;
+}
+
+.buttons {
+    bottom: 25px !important;
+}
+
+.buttons label {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.firstslide, .secondslide, .thirdslide, .fourthslide {
+    width: 25% !important;
+    min-width: 25% !important;
+}
+
+.main-flex {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    padding: 20px !important;
+}
+
+.card {
+    width: 200px !important;
+    padding: 15px !important;
+}
+
+.love-button {
+    bottom: 60px !important;
+    font-size: 1.6rem !important;
 }
