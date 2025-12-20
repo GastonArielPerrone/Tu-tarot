@@ -36,18 +36,22 @@ body {
 
 .header-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
     background-color: var(--header);
     box-shadow: 0 2px 4px var(--header-box-shadow);
 }
 
+.logo {
+    height: 80px;
+}
+
 /* nav and action */
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 15px;
     display: flex;
     gap: 20px;
 }
