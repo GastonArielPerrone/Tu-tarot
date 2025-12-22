@@ -591,21 +591,29 @@ nav ul li a:hover {
     .menu-toggle-label {
         display: none !important;
     }
+
+    .slide-title {
+        bottom: 140px !important;
+    }
+
+    .love-button {
+        bottom: 100px !important;
+    }
 }
 
 /* DISPOSITIVOS PEQUEÑOS: 767px o menos - Solo hamburguesa */
 @media (max-width: 767px) {
-    /* Mostrar menú hamburguesa */
+    
     .menu-toggle-label {
         display: block !important;
     }
 
-    /* Ocultar menú de navegación por defecto */
+    
     nav ul {
         display: none !important;
     }
 
-    /* Mostrar menú cuando está abierto */
+    
     #menu-toggle:checked ~ nav ul {
         display: flex !important;
     }
@@ -640,13 +648,13 @@ nav ul li a:hover {
 
     .slide-title {
         font-size: 1.6rem !important;
-        bottom: 80px !important;
+        bottom: 110px !important;
     }
 
     .love-button {
         padding: 8px 16px !important;
         font-size: 1.2rem !important;
-        bottom: 40px !important;
+        bottom: 70px !important;
     }
 
     .card {
@@ -702,14 +710,14 @@ nav ul li a:hover {
 
     .slide-title {
         font-size: 1.4rem !important;
-        bottom: 60px !important;
+        bottom: 90px !important;
         padding: 0.8rem 1.2rem !important;
     }
 
     .love-button {
         padding: 6px 12px !important;
         font-size: 1rem !important;
-        bottom: 30px !important;
+        bottom: 60px !important;
     }
 
     .buttons label {
@@ -773,12 +781,13 @@ nav ul li a:hover {
 
     .slide-title {
         font-size: 1.2rem !important;
-        bottom: 50px !important;
+        bottom: 70px !important;
     }
 
     .love-button {
         padding: 5px 10px !important;
         font-size: 0.9rem !important;
+        bottom: 50px !important;
     }
 
     .card {
