@@ -74,6 +74,7 @@ a:active, button:active , input:active, textarea:active, div[class="buttons"] la
     padding: 20px;
     background-color: var(--header);
     box-shadow: 0 2px 4px var(--header-box-shadow);
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -81,12 +82,18 @@ a:active, button:active , input:active, textarea:active, div[class="buttons"] la
 }
 
 /* nav and action */
+nav {
+    width: 100%;
+    order: 3;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 15px;
     display: flex;
     gap: 20px;
+    flex-direction: row;
 }
 
 nav ul li a {
@@ -103,6 +110,89 @@ nav ul li a:hover {
 
 nav ul li a:active {
     color: var(--button-hover);
+}
+
+/* Menu hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    font-size: 32px;
+    color: var(--text-color);
+    cursor: url("../static/images/content/pointer/pointer-hover.png") 16 16, pointer;
+    margin-left: auto;
+    transition: color 0.3s;
+    order: 2;
+}
+
+.menu-toggle-label:hover {
+    color: var(--primary-color);
+}
+
+/* Clase para mostrar el menú en dispositivos pequeños */
+#menu-toggle:checked ~ nav ul {
+    display: flex !important;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a:active {
+    color: var(--button-hover);
+}
+
+/* Estilos para el menú apilado cuando está abierto */
+#menu-toggle:checked ~ nav ul {
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#menu-toggle:checked ~ nav ul li {
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#menu-toggle:checked ~ nav ul li:last-child {
+    border-bottom: none;
+}
+
+#menu-toggle:checked ~ nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu-toggle:checked ~ nav ul li a:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: var(--primary-color);
 }
 
 /* Main content */
@@ -360,8 +450,6 @@ footer p {
     border-radius: 8px;
     margin-bottom: 10px;
 }
-/* Forzar diseño de escritorio en todos los dispositivos
-   Esto mantiene la misma apariencia que en PC (nav en fila, sliders 4x, tamaños fijos). */
 
 body {
     font-size: 62.5% !important;
@@ -444,4 +532,264 @@ nav ul li a:hover {
     font-size: 2.0rem !important;
     margin-bottom: 20px !important;
     color: var(--text-color) !important;
+}
+
+/* ===== MEDIA QUERIES PARA ADAPTABILIDAD DEL MENÚ ===== */
+
+/* ESCRITORIO: 1024px en adelante - Menú normal visible */
+@media (min-width: 1024px) {
+    .header-flex {
+        flex-wrap: nowrap;
+    }
+
+    .menu-toggle-label {
+        display: none !important;
+    }
+
+    nav {
+        width: auto !important;
+        order: auto !important;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important;
+    }
+}
+
+/* TABLET GRANDE: 768px a 1023px - Menú normal visible */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header-flex {
+        flex-wrap: nowrap;
+    }
+
+    nav {
+        width: auto !important;
+        order: auto !important;
+    }
+
+    nav ul {
+        gap: 15px;
+        padding: 15px 10px;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    nav ul li a {
+        font-size: 32px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .header-flex {
+        padding: 15px;
+    }
+
+    .menu-toggle-label {
+        display: none !important;
+    }
+}
+
+/* DISPOSITIVOS PEQUEÑOS: 767px o menos - Solo hamburguesa */
+@media (max-width: 767px) {
+    /* Mostrar menú hamburguesa */
+    .menu-toggle-label {
+        display: block !important;
+    }
+
+    /* Ocultar menú de navegación por defecto */
+    nav ul {
+        display: none !important;
+    }
+
+    /* Mostrar menú cuando está abierto */
+    #menu-toggle:checked ~ nav ul {
+        display: flex !important;
+    }
+
+    .header-flex {
+        padding: 15px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+}
+
+/* MÓVIL GRANDE: 481px a 767px */
+@media (max-width: 767px) and (min-width: 481px) {
+    .material-symbols-outlined {
+        font-size: 28px;
+    }
+
+    .header-flex {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .slider {
+        height: 50vh !important;
+    }
+
+    .slide-title {
+        font-size: 1.6rem !important;
+        bottom: 80px !important;
+    }
+
+    .love-button {
+        padding: 8px 16px !important;
+        font-size: 1.2rem !important;
+        bottom: 40px !important;
+    }
+
+    .card {
+        width: 150px !important;
+        padding: 10px !important;
+    }
+
+    main h1, h1 {
+        font-size: 1.6rem;
+    }
+
+    main h2, h2 {
+        font-size: 1.4rem;
+    }
+
+    main p, p {
+        font-size: 1.2rem;
+    }
+
+    .updates {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    section ul li {
+        font-size: 1.2rem;
+    }
+}
+
+/* MÓVIL PEQUEÑO: 320px a 480px */
+@media (max-width: 480px) {
+    .material-symbols-outlined {
+        display: block;
+        font-size: 24px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .header-flex {
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .slider {
+        height: 40vh !important;
+    }
+
+    .slide-title {
+        font-size: 1.4rem !important;
+        bottom: 60px !important;
+        padding: 0.8rem 1.2rem !important;
+    }
+
+    .love-button {
+        padding: 6px 12px !important;
+        font-size: 1rem !important;
+        bottom: 30px !important;
+    }
+
+    .buttons label {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
+    .card {
+        width: 120px !important;
+        padding: 8px !important;
+    }
+
+    main h1, h1 {
+        font-size: 1.4rem;
+    }
+
+    main h2, h2 {
+        font-size: 1.2rem;
+    }
+
+    main p, p {
+        font-size: 1rem;
+    }
+
+    .updates {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    section ul li {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    main a, a {
+        font-size: 1.2rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* ULTRA PEQUEÑO: menos de 320px */
+@media (max-width: 320px) {
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+
+    .header-flex {
+        padding: 8px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .slider {
+        height: 35vh !important;
+    }
+
+    .slide-title {
+        font-size: 1.2rem !important;
+        bottom: 50px !important;
+    }
+
+    .love-button {
+        padding: 5px 10px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .card {
+        width: 100px !important;
+    }
+
+    main h1, h1 {
+        font-size: 1.2rem;
+    }
+
+    main h2, h2 {
+        font-size: 1rem;
+    }
 }
