@@ -534,6 +534,61 @@ nav ul li a:hover {
     color: var(--text-color) !important;
 }
 
+.white-text {
+    color: var(--text-color) !important;
+}
+
+.type-tarot-option-flex {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    padding: 10px !important;
+}
+
+/* Tarot Options for Love */
+
+.tarot-three-cards-love {
+    background-image: url("../static/images/content/tres-cartas.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
+.tarot-one-card-love {
+    background-image: url("../static/images/content/una-carta.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    margin-top: 5px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
+.tarot-celtic-cross-card-love {
+    background-image: url("../static/images/content/cruz-celta.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    margin-top: 5px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
 /* ===== MEDIA QUERIES PARA ADAPTABILIDAD DEL MENÚ ===== */
 
 /* ESCRITORIO: 1024px en adelante - Menú normal visible */
