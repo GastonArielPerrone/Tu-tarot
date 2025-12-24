@@ -548,8 +548,8 @@ nav ul li a:hover {
 
 /* Tarot Options for Love */
 
-.tarot-three-cards-love {
-    background-image: url("../static/images/content/tres-cartas.png") !important;
+.one-card {
+    background-image: url("../static/images/content/una-carta.png") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -561,8 +561,8 @@ nav ul li a:hover {
     transition: transform 0.3s !important;
 }
 
-.tarot-one-card-love {
-    background-image: url("../static/images/content/una-carta.png") !important;
+.three-cards {
+    background-image: url("../static/images/content/tres-cartas.png") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -575,7 +575,7 @@ nav ul li a:hover {
     transition: transform 0.3s !important;
 }
 
-.tarot-celtic-cross-card-love {
+.cross-celtic {
     background-image: url("../static/images/content/cruz-celta.png") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -587,6 +587,26 @@ nav ul li a:hover {
     margin-top: 5px !important;
     text-align: center !important;
     transition: transform 0.3s !important;
+}
+
+.tarot-type-cards {
+    font-size: 1.6rem !important;
+    font-weight: bold !important;
+}
+
+div.tarot-type-cards:hover {
+    background-color: var(--text-color)!important;
+    opacity: 0.9 !important;
+    color: var(--background-color) !important;
+    cursor: url("../static/images/content/pointer/pointer-hover.png") 16 16, pointer !important;
+}
+
+div.tarot-type-cards:active {
+    background-color: var(--button-hover) !important;
+    color: var(--background-color) !important;
+    border: var(--text-color) 2.5px solid !important;
+    box-shadow: var(--text-color) 0 0 10px !important;
+    cursor: url("../static/images/content/pointer/pointer-click.png") 16 16, pointer !important;
 }
 
 /* ===== MEDIA QUERIES PARA ADAPTABILIDAD DEL MENÚ ===== */
