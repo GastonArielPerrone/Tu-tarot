@@ -1,4 +1,4 @@
-# 🎊 ¡INTEGRACIÓN COMPLETADA! 
+# 🎊 ¡INTEGRACIÓN COMPLETADA
 
 ## Lo que se ha hecho
 
@@ -15,9 +15,11 @@ He integrado completamente **Ollama con el modelo llama3** a tu proyecto TuTarot
 ## 🎯 Archivos Creados
 
 ### Principal
+
 - **`js/ollamaService.js`** - Servicio de comunicación con Ollama
 
 ### Documentación (6 archivos)
+
 1. **`INICIO_RAPIDO.md`** - Guía de 1 minuto para empezar
 2. **`README_OLLAMA.md`** - Documentación completa general
 3. **`OLLAMA_SETUP.md`** - Guía técnica detallada
@@ -32,6 +34,7 @@ He integrado completamente **Ollama con el modelo llama3** a tu proyecto TuTarot
 ## 📝 Archivos Modificados
 
 ### `js/main-tarot-love-three-cards.js`
+
 - ✅ Import de `ollamaService.js`
 - ✅ Variables globales para datos
 - ✅ Nueva función `generateTarotistInterpretation()`
@@ -39,6 +42,7 @@ He integrado completamente **Ollama con el modelo llama3** a tu proyecto TuTarot
 - ✅ Nueva sección HTML "Tarotista IA" en el modal
 
 ### `css/styles.css`
+
 - ✅ Estilos para `.tarotista-ia-section` (bordes púrpura)
 - ✅ Estilos para `#tarotista-response`
 - ✅ Animación `fadeIn`
@@ -48,6 +52,7 @@ He integrado completamente **Ollama con el modelo llama3** a tu proyecto TuTarot
 ## 🚀 Cómo Empezar
 
 ### 1. Primero (una sola vez)
+
 ```bash
 # Descargar Ollama desde https://ollama.ai/
 # Luego en terminal:
@@ -55,12 +60,14 @@ ollama pull llama3
 ```
 
 ### 2. Cada vez que uses
+
 ```bash
 # En una terminal, ejecutar Ollama
 ollama serve
 ```
 
 ### 3. Usar la aplicación
+
 - Abre: `pages/tarot-love-three-cards.html`
 - Completa el formulario
 - Haz click en: "Barajar y colocar cartas sobre la mesa"
@@ -89,6 +96,7 @@ Usuario lee la lectura personalizada
 ### Ejemplo de Resultado
 
 **Entrada:**
+
 - Usuario: María Ana, 32 años, en pareja
 - Pasado: Relación intensa que marcó confianza
 - Presente: Incertidumbre pero esperanza
@@ -96,6 +104,7 @@ Usuario lee la lectura personalizada
 - Cartas: Los Amantes, Dos de Copas, As de Oros
 
 **Salida (del Tarotista IA):**
+
 ```
 Querida María Ana,
 
@@ -113,6 +122,7 @@ conexión profunda y significativa...
 ## ⚙️ Configuración
 
 ### Cambiar velocidad de escritura
+
 ```javascript
 // Archivo: js/main-tarot-love-three-cards.js
 // Busca: const speed = 50;
@@ -120,6 +130,7 @@ conexión profunda y significativa...
 ```
 
 ### Cambiar modelo de IA
+
 ```javascript
 // Archivo: js/ollamaService.js
 // Cambia: const MODEL = 'llama3';
@@ -167,21 +178,25 @@ Todos estos archivos están en la **raíz del proyecto** (Tu-tarot/):
 ## ✨ Características Destacadas
 
 🎴 **Lectura de 3 Cartas**
+
 - Pasado, Presente, Futuro
 - Cartas aleatorias de tu deck
 - Con imágenes y descripciones
 
 🤖 **Tarotista IA**
+
 - Analiza cada carta
 - Considera datos personales del usuario
 - Genera consejos prácticos
 
 ✍️ **Efecto de Escritura**
+
 - Texto aparece letra por letra
 - Efecto visual atractivo
 - Velocidad configurable
 
 🎨 **Diseño Bonito**
+
 - Sección con bordes púrpura
 - Animación suave al aparecer
 - Auto-scroll automático
@@ -230,9 +245,10 @@ Todos estos archivos están en la **raíz del proyecto** (Tu-tarot/):
 
 ---
 
-## 🎉 ¡LISTO PARA USAR!
+## 🎉 ¡LISTO PARA USAR
 
 **Solo necesitas:**
+
 1. Instalar Ollama
 2. Descargar modelo llama3
 3. Ejecutar `ollama serve`

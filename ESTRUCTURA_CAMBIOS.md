@@ -47,6 +47,7 @@ Tu-tarot/
 ### ARCHIVOS NUEVOS
 
 #### `js/ollamaService.js` (NEW) ⭐⭐⭐
+
 ```javascript
 // Lo más importante para la integración IA
 
@@ -71,6 +72,7 @@ Funciones Principales:
 ### ARCHIVOS MODIFICADOS
 
 #### `js/main-tarot-love-three-cards.js` (MODIFIED) ⭐⭐
+
 ```javascript
 // Orquestación del flujo completo
 
@@ -115,6 +117,7 @@ CAMBIOS PRINCIPALES:
 ---
 
 #### `css/styles.css` (MODIFIED) ⭐
+
 ```css
 // Estilos para la sección Tarotista IA
 
@@ -174,6 +177,7 @@ CAMBIOS:
 ## 🔄 Cómo Funcionan los Cambios
 
 ### 1. Usuario completa formulario
+
 ```javascript
 // main-tarot-love-three-cards.js (línea 51-74)
 const formData = {
@@ -184,6 +188,7 @@ currentFormData = formData; // GUARDAR
 ```
 
 ### 2. Sistema selecciona cartas
+
 ```javascript
 // main-tarot-love-three-cards.js (línea 76-80)
 const cards = await selectThreeCardsRandom();
@@ -191,6 +196,7 @@ currentCardsData = cards; // GUARDAR
 ```
 
 ### 3. Modal se renderiza
+
 ```javascript
 // main-tarot-love-three-cards.js (línea 103-144)
 renderModalContent() {
@@ -199,6 +205,7 @@ renderModalContent() {
 ```
 
 ### 4. Llama a Ollama
+
 ```javascript
 // main-tarot-love-three-cards.js (línea 165-184)
 async function generateTarotistInterpretation() {
@@ -210,6 +217,7 @@ async function generateTarotistInterpretation() {
 ```
 
 ### 5. Construye el prompt
+
 ```javascript
 // ollamaService.js (línea 33-82)
 buildPrompt(formData, cardsData) {
@@ -220,6 +228,7 @@ buildPrompt(formData, cardsData) {
 ```
 
 ### 6. Envía a Ollama
+
 ```javascript
 // ollamaService.js (línea 9-32)
 fetch('http://localhost:11434/api/generate', {
@@ -234,6 +243,7 @@ fetch('http://localhost:11434/api/generate', {
 ```
 
 ### 7. Muestra texto letra por letra
+
 ```javascript
 // main-tarot-love-three-cards.js (línea 186-210)
 displayTextLetterByLetter(element, text) {

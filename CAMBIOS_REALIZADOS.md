@@ -3,6 +3,7 @@
 ## 📋 Cambios Realizados
 
 ### 1. ✨ Nuevo Archivo: `js/ollamaService.js`
+
 Este archivo maneja toda la comunicación con Ollama. Contiene:
 
 - **`getTarotistInterpretation(formData, cardsData)`** - Función principal que:
@@ -20,7 +21,8 @@ Este archivo maneja toda la comunicación con Ollama. Contiene:
 
 ### 2. 🔧 Modificado: `js/main-tarot-love-three-cards.js`
 
-#### Cambios principales:
+#### Cambios principales
+
 - **Importación del servicio Ollama** al inicio del archivo
 - **Variables globales** para almacenar datos:
   - `currentFormData` - Datos del formulario del usuario
@@ -70,7 +72,9 @@ Agregados nuevos estilos:
 ```
 
 ### 4. 📚 Nuevo Archivo: `OLLAMA_SETUP.md`
+
 Documentación completa sobre cómo usar la integración con Ollama:
+
 - Requisitos previos
 - Cómo funciona el sistema
 - Configuración personalizable
@@ -106,20 +110,26 @@ Documentación completa sobre cómo usar la integración con Ollama:
 
 ## ⚙️ Configuración Fácil
 
-### Cambiar velocidad de escritura:
+### Cambiar velocidad de escritura
+
 En `js/main-tarot-love-three-cards.js`, función `displayTextLetterByLetter()`:
+
 ```javascript
 const speed = 50; // Cambiar este número (en milisegundos)
 ```
 
-### Cambiar modelo de IA:
+### Cambiar modelo de IA
+
 En `js/ollamaService.js`:
+
 ```javascript
 const MODEL = 'llama3'; // Cambiar a: mistral, neural-chat, etc.
 ```
 
-### Cambiar URL de Ollama:
+### Cambiar URL de Ollama
+
 En `js/ollamaService.js`:
+
 ```javascript
 const OLLAMA_API = 'http://localhost:11434/api/generate'; // Cambiar si Ollama está en otro servidor
 ```
@@ -129,11 +139,13 @@ const OLLAMA_API = 'http://localhost:11434/api/generate'; // Cambiar si Ollama e
 ## 🧪 Prueba Rápida
 
 1. Asegúrate de tener Ollama ejecutándose:
+
    ```bash
    ollama serve
    ```
 
 2. En otra terminal, descarga el modelo si no lo tienes:
+
    ```bash
    ollama pull llama3
    ```
@@ -151,14 +163,17 @@ const OLLAMA_API = 'http://localhost:11434/api/generate'; // Cambiar si Ollama e
 ## 🐛 Solución de Problemas
 
 ### Error: "No se pudo conectar con Ollama"
+
 - Verifica que Ollama esté ejecutándose en `http://localhost:11434`
 - Abre en el navegador: `http://localhost:11434` (debe decir "Ollama is running")
 
 ### La interpretación tarda mucho
+
 - Esto es normal, especialmente con llama3
 - Puede tomar 30-120 segundos dependiendo del hardware
 
 ### El texto no aparece letra por letra
+
 - Revisa la consola (F12) para ver si hay errores
 - Verifica que `ollamaService.js` se esté cargando correctamente
 

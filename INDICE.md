@@ -3,6 +3,7 @@
 ## 🎯 Por Dónde Empezar
 
 ### Eres Usuario Final (no programador)
+
 ```
 1. Lee: SUPER_SIMPLE.md ⭐
 2. Lee: INICIO_RAPIDO.md
@@ -10,6 +11,7 @@
 ```
 
 ### Eres Programmer/Developer
+
 ```
 1. Lee: INICIO_RAPIDO.md ⭐
 2. Lee: README_OLLAMA.md
@@ -19,6 +21,7 @@
 ```
 
 ### Estás Haciendo Code Review
+
 ```
 1. Lee: ESTRUCTURA_CAMBIOS.md ⭐
 2. Revisa: CAMBIOS_REALIZADOS.md
@@ -30,9 +33,11 @@
 ## 📚 Documentación Completa
 
 ### 1. 🚀 INICIO_RAPIDO.md
+
 **Propósito**: Empezar en 1 minuto  
 **Para**: Todos  
 **Contiene**:
+
 - Requisitos previos
 - Comandos básicos
 - Los 3 pasos para empezar
@@ -43,9 +48,11 @@
 ---
 
 ### 2. 👶 SUPER_SIMPLE.md
+
 **Propósito**: Explicación sin jerga técnica  
 **Para**: No programadores  
 **Contiene**:
+
 - ¿Qué pasó? (en español simple)
 - Guía paso a paso
 - Ejemplos de entrada/salida
@@ -56,9 +63,11 @@
 ---
 
 ### 3. 📖 README_OLLAMA.md
+
 **Propósito**: Visión general completa  
 **Para**: Todos (especialmente usuarios nuevos)  
 **Contiene**:
+
 - ¿Qué se ha hecho?
 - Archivos creados/modificados
 - Cómo usar
@@ -70,9 +79,11 @@
 ---
 
 ### 4. 🛠️ OLLAMA_SETUP.md
+
 **Propósito**: Guía técnica detallada  
 **Para**: Programmers/Developers  
 **Contiene**:
+
 - Requisitos técnicos
 - Instalación de Ollama
 - Configuración avanzada
@@ -85,9 +96,11 @@
 ---
 
 ### 5. 🔧 CAMBIOS_REALIZADOS.md
+
 **Propósito**: Detalle de modificaciones  
 **Para**: Developers/Code Review  
 **Contiene**:
+
 - Archivos nuevos y modificados
 - Cambios línea por línea
 - Función de cada cambio
@@ -99,9 +112,11 @@
 ---
 
 ### 6. 💡 EJEMPLO_RESPUESTA.md
+
 **Propósito**: Ver ejemplos de salida  
 **Para**: Entender qué esperar  
 **Contiene**:
+
 - Datos de entrada de ejemplo
 - Respuesta completa del Tarotista IA
 - Explicación de cada sección
@@ -112,9 +127,11 @@
 ---
 
 ### 7. ⚡ QUICK_REFERENCE.md
+
 **Propósito**: Referencia rápida  
 **Para**: Cuando necesitas algo rápido  
 **Contiene**:
+
 - TL;DR (resumen ejecutivo)
 - Archivos principales
 - Flujo resumido
@@ -126,9 +143,11 @@
 ---
 
 ### 8. 🎨 RESUMEN_VISUAL.md
+
 **Propósito**: Diagramas y visualizaciones  
 **Para**: Entendimiento visual  
 **Contiene**:
+
 - Diagrama del sistema
 - Flujo de ejecución
 - Visualización del modal
@@ -140,9 +159,11 @@
 ---
 
 ### 9. ✅ VERIFICACION.md
+
 **Propósito**: Checklist de integración  
 **Para**: QA/Testing  
 **Contiene**:
+
 - Checklist de archivos
 - Funcionalidades verificadas
 - Flujo de ejecución
@@ -154,9 +175,11 @@
 ---
 
 ### 10. 📂 ESTRUCTURA_CAMBIOS.md
+
 **Propósito**: Estructura de cambios  
 **Para**: Developers/Arquitectura  
 **Contiene**:
+
 - Árbol de archivos
 - Detalles de cada cambio
 - Estadísticas de cambios
@@ -168,9 +191,11 @@
 ---
 
 ### 11. 🎊 INSTRUCCIONES_FINALES.md
+
 **Propósito**: Resumen ejecutivo  
 **Para**: Presentación final  
 **Contiene**:
+
 - Lo que se ha hecho
 - Cómo empezar
 - Configuración
@@ -235,27 +260,35 @@ Para Code Review:
 ## 🔍 Buscar Específico
 
 ### "No funciona"
+
 → `OLLAMA_SETUP.md` → "Solución de Problemas"
 
 ### "¿Cómo cambio X?"
+
 → `README_OLLAMA.md` → "Configuración"
 
 ### "¿Qué cambió?"
+
 → `CAMBIOS_REALIZADOS.md` o `ESTRUCTURA_CAMBIOS.md`
 
 ### "¿Cómo se ve?"
+
 → `RESUMEN_VISUAL.md`
 
 ### "¿Qué espero ver?"
+
 → `EJEMPLO_RESPUESTA.md`
 
 ### "Necesito respuesta rápida"
+
 → `QUICK_REFERENCE.md`
 
 ### "Soy no-programmer"
+
 → `SUPER_SIMPLE.md`
 
 ### "Necesito todo"
+
 → Lee en orden: INICIO_RAPIDO → README_OLLAMA → OLLAMA_SETUP
 
 ---
@@ -283,26 +316,32 @@ Para Code Review:
 ## 🎓 Uso por Rol
 
 ### Usuario Final
+
 **Leer**: SUPER_SIMPLE.md, INICIO_RAPIDO.md  
 **Tiempo**: 4 minutos
 
 ### Product Manager
+
 **Leer**: README_OLLAMA.md, RESUMEN_VISUAL.md  
 **Tiempo**: 10 minutos
 
 ### Full Stack Developer
+
 **Leer**: TODO  
 **Tiempo**: 45 minutos
 
 ### Frontend Developer
+
 **Leer**: CAMBIOS_REALIZADOS.md, ESTRUCTURA_CAMBIOS.md  
 **Tiempo**: 15 minutos
 
 ### Backend Developer
+
 **Leer**: OLLAMA_SETUP.md, CAMBIOS_REALIZADOS.md  
 **Tiempo**: 15 minutos
 
 ### QA/Testing
+
 **Leer**: VERIFICACION.md, SUPER_SIMPLE.md  
 **Tiempo**: 10 minutos
 

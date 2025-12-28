@@ -3,18 +3,21 @@
 ## Datos de Entrada
 
 **Usuario:**
+
 - Nombre: María Ana Gómez Pérez
 - Edad: 32 años
 - Estado sentimental: En pareja
 - Pareja: Juan Carlos Ruiz
 
 **Contexto Personal:**
+
 - **Pasado**: Tuviste una relación intensa hace 2 años que marcó confianza y aprendizaje.
 - **Presente**: Sientes incertidumbre pero esperanza; hay comunicación reciente.
 - **Futuro**: Posible reconciliación si trabajáis la comunicación y límites claros.
 - **Detalles**: Viven en ciudades diferentes, se ven fines de semana.
 
 **Cartas Asignadas:**
+
 - **Pasado**: The Lovers (Los Amantes)
 - **Presente**: The Two of Cups (El Dos de Copas)
 - **Futuro**: The Ace of Pentacles (El As de Oros)
