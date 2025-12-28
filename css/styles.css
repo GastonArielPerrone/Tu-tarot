@@ -923,6 +923,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     font-family: var(--font-family);
 }
 
+.modal-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
 .modal-close {
     position: absolute;
     top: 20px;
@@ -996,7 +1001,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .card-description {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     margin: 15px 0;
@@ -1189,8 +1194,8 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     min-height: 100px;
     font-style: italic;
     color: #666;
-    line-height: 1.6;
-    font-size: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.3rem;
     max-height: 400px;
     overflow-y: auto;
     padding: 10px;
