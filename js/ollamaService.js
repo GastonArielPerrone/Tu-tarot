@@ -1,84 +1,45 @@
 /**
- * Servicio para integración con Ollama
- * Utiliza el modelo llama3 para actuar como Tarotista
+ * Servicio para integración con Ollama a través del Backend (Railway)
+ * Llamada HTTP al backend que actúa como proxy a Ollama
  */
 
-const OLLAMA_API = 'http://localhost:11434/api/generate';
-const MODEL = 'llama3';
+// URL del Backend - Se reemplaza según el entorno
+// Producción (Railway): https://tutarot-backend.railway.app/api/tarot
+// Desarrollo local: http://localhost:3000/api/tarot
+const BACKEND_API = process.env.BACKEND_API_URL || 'https://tutarot-backend.railway.app/api/tarot';
 
 export async function getTarotistInterpretation(formData, cardsData) {
     try {
-        const prompt = buildPrompt(formData, cardsData);
+        console.log('Enviando solicitud al backend en:', BACKEND_API);
         
-        console.log('Enviando solicitud a Ollama...');
-        console.log('Prompt:', prompt);
-        
-        const response = await fetch(OLLAMA_API, {
+        const response = await fetch(BACKEND_API, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                model: MODEL,
-                prompt: prompt,
-                stream: false,
-                temperature: 0.7,
+                formData: formData,
+                cardsData: cardsData
             })
         });
 
         if (!response.ok) {
-            throw new Error(`Error de Ollama: ${response.status} ${response.statusText}`);
+            const errorData = await response.json();
+            throw new Error(errorData.error || `Error del servidor: ${response.status}`);
         }
 
         const data = await response.json();
-        console.log('Respuesta de Ollama recibida');
-        console.log('Data recibida:', data);
-        console.log('Response property:', data.response);
-        console.log('Largo de respuesta:', data.response ? data.response.length : 'N/A');
+        console.log('Respuesta del backend recibida ✓');
+        console.log('Interpretación:', data.response ? data.response.substring(0, 100) + '...' : 'N/A');
+        
+        if (!data.success) {
+            throw new Error(data.error || 'Error desconocido del backend');
+        }
         
         return data.response || '';
     } catch (error) {
-        console.error('Error al conectar con Ollama:', error);
-        throw new Error(`No se pudo conectar con Ollama. Asegúrate de que esté ejecutándose en http://localhost:11434. Error: ${error.message}`);
+        console.error('Error al conectar con el backend:', error);
+        throw new Error(`No se pudo conectar con el servicio de tarot. Error: ${error.message}`);
     }
 }
 
-function buildPrompt(formData, cardsData) {
-    const systemPrompt = `Eres un Tarotista experto y empático. Tu tarea es interpretar las cartas del tarot de manera profunda, considerando el contexto personal del usuario.
-
-Rol: Tarotista
-Instrucciones: Necesito que como tarotista le expliques bien al usuario acerca de cada carta que se le asignó en base a Pasado, Presente y Futuro y los datos aportados por el usuario. Por último resumile el resultado final con consejos para afrontarlo.
-
-Importante:
-- Sé empático y considerado en tu interpretación
-- Conecta la interpretación de las cartas con los datos personales proporcionados
-- Ofrece perspectivas constructivas y esperanzadoras
-- Incluye consejos prácticos al final`;
-
-    const userContext = `
-Datos del usuario:
-- Nombre: ${formData.nombres} ${formData.apellidos}
-- Edad: ${formData.edad} años
-- Estado sentimental: ${formData.estado}
-${formData.pareja ? `- Pareja: ${formData.pareja}` : ''}
-
-Contexto del usuario:
-- PASADO: ${formData.pasado}
-- PRESENTE: ${formData.presente}
-- FUTURO: ${formData.futuro}
-${formData.detalle ? `- Detalles adicionales: ${formData.detalle}` : ''}
-
-Cartas asignadas:
-- PASADO: ${cardsData.past.name}
-  Descripción: ${cardsData.past.description}
-
-- PRESENTE: ${cardsData.present.name}
-  Descripción: ${cardsData.present.description}
-
-- FUTURO: ${cardsData.future.name}
-  Descripción: ${cardsData.future.description}
-
-Por favor, realiza una interpretación profunda y personalizada de estas cartas considerando el contexto del usuario.`;
-
-    return `${systemPrompt}\n\n${userContext}`;
-}
