@@ -9,6 +9,16 @@ let currentCardsData = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Cargado - Iniciando script');
+
+    const mute = document.querySelector('.muted').textContent;
+    const ttsmuted = new SpeechSynthesisUtterance(mute);
+    ttsmuted.lang = 'es-ES';
+    ttsmuted.rate = 0.70;
+    ttsmuted.pitch = 1.2;
+    ttsmuted.volume = 2.0;
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(ttsmuted);
     
     const form = document.getElementById('love-three-form');
     const modal = document.getElementById('myModal');
