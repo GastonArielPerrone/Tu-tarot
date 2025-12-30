@@ -1,13 +1,11 @@
 import { selectThreeCardsRandom } from "./selectThreeCards.js";
-import { getTarotistInterpretation } from "./ollamaService.js";
+import { getTarotistInterpretation } from "../ollamaService.js";
 
 // Variable global para almacenar datos del formulario y cartas
 let currentFormData = null;
 let currentCardsData = null;
     // Text-to-Speech (TTS) control
     let ttsEnabled = true; // cambiar a false si no se desea reproducción automática
-    let ttsChunkSize = 80; // cantidad mínima de caracteres por chunk a hablar
-    let ttsCurrentUtterance = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Cargado - Iniciando script');
