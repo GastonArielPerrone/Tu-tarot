@@ -4,6 +4,10 @@ import { getTarotistInterpretation } from "./ollamaService.js";
 // Variable global para almacenar datos del formulario y cartas
 let currentFormData = null;
 let currentCardsData = null;
+    // Text-to-Speech (TTS) control
+    let ttsEnabled = true; // cambiar a false si no se desea reproducción automática
+    let ttsChunkSize = 80; // cantidad mínima de caracteres por chunk a hablar
+    let ttsCurrentUtterance = null;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Cargado - Iniciando script');
@@ -150,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeModal() {
         console.log('Cerrando modal');
         modal.classList.remove('show');
+        // Detener cualquier TTS en reproducción al cerrar modal
+        stopTTS();
     }
     
     // Función para obtener interpretación del Tarotista IA
@@ -166,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
             responseDiv.innerHTML = '<p style="color: #999;">Consultando al Tarotista IA... (esto puede tomar unos segundos)</p>';
             
             console.log('Llamando a getTarotistInterpretation...');
+            // Asegurarnos de detener cualquier TTS previo antes de nueva lectura
+            stopTTS();
             const interpretation = await getTarotistInterpretation(currentFormData, currentCardsData);
             
             console.log('Interpretación recibida, tipo:', typeof interpretation);
@@ -191,27 +199,67 @@ document.addEventListener('DOMContentLoaded', () => {
         element.innerHTML = '';
         let index = 0;
         const speed = 50; // Milisegundos entre cada carácter
-        
+
         const p = document.createElement('p');
         p.style.color = 'var(--text-color)';
         p.style.whiteSpace = 'pre-wrap';
         p.style.wordWrap = 'break-word';
         p.style.lineHeight = '1.6';
         element.appendChild(p);
-        
-        console.log('Párrafo creado, iniciando setInterval');
-        
+
+        console.log('Párrafo creado, iniciando setInterval (sin TTS incremental)');
+
+        const shouldUseSpeech = (typeof window !== 'undefined') && ('speechSynthesis' in window) && ttsEnabled;
+
         const interval = setInterval(() => {
             if (index < text.length) {
-                p.textContent += text.charAt(index);
+                const ch = text.charAt(index);
+                p.textContent += ch;
                 index++;
                 // Auto-scroll dentro del elemento si es necesario
                 element.scrollTop = element.scrollHeight;
             } else {
                 clearInterval(interval);
                 console.log('Interpretación completada - ' + index + ' caracteres mostrados');
+                // Reproducir TTS una vez que todo el texto haya sido mostrado
+                if (shouldUseSpeech) {
+                    // Asegurar que no haya TTS previo
+                    stopTTS();
+                    // Hablar el texto completo (puede dividir internamente si es muy largo)
+                    speakChunk(text);
+                }
             }
         }, speed);
+    }
+
+    // Helper: detiene cualquier TTS en curso
+    function stopTTS() {
+        try {
+            if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            ttsCurrentUtterance = null;
+        } catch (e) {
+            console.warn('stopTTS error', e);
+        }
+    }
+
+    // Helper: habla un chunk de texto usando SpeechSynthesis
+    function speakChunk(chunk) {
+        if (!(typeof window !== 'undefined' && 'speechSynthesis' in window)) return;
+        if (!ttsEnabled) return;
+        try {
+            // Cancelar cualquier utterance anterior para evitar solapado
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(chunk);
+            utterance.lang = 'es-ES';
+            utterance.rate = 0.95;
+            utterance.pitch = 1.0;
+            ttsCurrentUtterance = utterance;
+            window.speechSynthesis.speak(utterance);
+        } catch (e) {
+            console.warn('speakChunk error', e);
+        }
     }
 
     });
