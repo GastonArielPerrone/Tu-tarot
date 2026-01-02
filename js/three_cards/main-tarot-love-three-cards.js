@@ -1,5 +1,5 @@
 import { selectThreeCardsRandom } from "./selectThreeCards.js";
-import { getTarotistInterpretation } from "../ollamaService.js";
+import { getTarotistInterpretation } from "./ollamaService.js";
 
 // Variable global para almacenar datos del formulario y cartas
 let currentFormData = null;
