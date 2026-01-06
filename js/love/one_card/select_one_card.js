@@ -5,7 +5,7 @@
 export async function selectOneCardRandom() {
     try {
         // Ruta correcta: subir desde js/one_card/ → js/ → raíz → API/
-        const response = await fetch('../../API/tarot_deck.json');
+        const response = await fetch('../API/tarot_deck.json');
         
         if (!response.ok) {
             throw new Error('Error 404: No se pudo cargar el archivo tarot_deck.json. Status: ' + response.status);
