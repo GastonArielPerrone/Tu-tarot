@@ -1,5 +1,5 @@
-openPage();
-function openPage() {
+openPageLove();
+function openPageLove() {
     const imageButtons = document.querySelectorAll('.tarot-type-cards');
 
     imageButtons.forEach(button => {
