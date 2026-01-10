@@ -1,22 +1,20 @@
 import { selectOneCardRandom } from "./select_one_card.js";
 import { getTarotistInterpretationOneCard } from "./ollamaService.js";
 
-// Variable global para almacenar datos del formulario y carta
 let currentFormData = null;
 let currentCardData = null;
-// Text-to-Speech (TTS) control
-let ttsEnabled = true; // cambiar a false si no se desea reproducción automática
+
+let ttsEnabled = true;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Cargado - Iniciando script');
 
-    // Mensaje de bienvenida (TTS)
     try {
         const mute = document.querySelector('.muted');
         if (mute) {
             const ttsmuted = new SpeechSynthesisUtterance(mute.textContent);
             ttsmuted.lang = 'es-ES';
-            ttsmuted.rate = 0.70;
+            ttsmuted.rate = 0.80;
             ttsmuted.pitch = 1.2;
             ttsmuted.volume = 0.5;
             window.speechSynthesis.cancel();
@@ -44,21 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
     
-    // Cerrar modal al hacer clic fuera
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
     
-    // Cerrar modal con tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('show')) {
             closeModal();
         }
     });
-    
-    // Manejador del botón de envío
+
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) {
         submitBtn.addEventListener('click', async (event) => {
@@ -66,14 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             event.stopPropagation();
             
-            // Validar que todos los campos requeridos estén llenos
             if (!form.checkValidity()) {
                 console.log('Formulario no válido');
                 form.reportValidity();
                 return false;
             }
             
-            // Capturar datos del formulario
             const formData = {
                 nombres: document.getElementById('nombres').value.trim(),
                 apellidos: document.getElementById('apellidos').value.trim(),
@@ -85,27 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log('Datos capturados:', formData);
             
-            // Guardar datos globales para usar en la interpretación
             currentFormData = formData;
             
-            // Obtener la carta seleccionada al azar
             console.log('Cargando carta...');
+            
             try {
                 const card = await selectOneCardRandom();
                 
                 console.log('Carta recibida:', card);
                 
                 if (card && card.name) {
-                    // Guardar datos de la carta
                     currentCardData = card;
                     
-                    // Renderizar contenido del modal
                     renderModalContent(card);
                     
-                    // Mostrar modal
                     openModal();
-                    
-                    // Llamar a Ollama para obtener la interpretación
+                
                     await generateTarotistInterpretation();
                 } else {
                     console.error('No se pudo cargar la carta:', card);
@@ -151,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (content) {
             content.innerHTML = html;
             
-            // Agregar event listener al botón de cerrar
             const closeBtn = content.querySelector('.modal-close');
             if (closeBtn) {
                 closeBtn.addEventListener('click', closeModal);
@@ -171,10 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await getTarotistInterpretationOneCard(currentFormData, currentCardData);
             console.log('Respuesta recibida de Ollama');
             
-            // Limpiar y mostrar la interpretación
             responseDiv.innerHTML = `<p>${response.replace(/\n/g, '<br>')}</p>`;
             
-            // Reproducir TTS si está habilitado
             if (ttsEnabled) {
                 try {
                     const utterance = new SpeechSynthesisUtterance(response);

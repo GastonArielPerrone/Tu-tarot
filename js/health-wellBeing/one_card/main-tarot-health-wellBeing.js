@@ -1,8 +1,9 @@
-import { selectThreeCardsRandom } from "./selectThreeCards.js";
-import { getTarotistInterpretation } from "./ollamaService.js";
+import { selectOneCardRandom } from "./select_one_card.js";
+import {getTarotistInterpretationOneCard} from "./ollamaService.js";
 
 let currentFormData = null;
-let currentCardsData = null;
+let currentCardData = null;
+
 let ttsEnabled = true;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('TTS inicial no disponible:', error.message);
     }
     
-    const form = document.getElementById('love-three-form');
+    const form = document.getElementById('health-wellbeing-one-form');
     const modal = document.getElementById('myModal');
     
     console.log('Formulario encontrado:', !!form);
@@ -66,42 +67,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 return false;
             }
             
-            currentFormData = {
-                nombres: document.getElementById('nombres').value,
-                apellidos: document.getElementById('apellidos').value,
-                edad: document.getElementById('edad').value,
-                pareja: document.getElementById('pareja').value,
-                estado: document.getElementById('estado').value,
-                pasado: document.getElementById('pasado').value,
-                presente: document.getElementById('presente').value,
-                futuro: document.getElementById('futuro').value,
-                detalle: document.getElementById('detalle').value
+            const formData = {
+                nombres: document.getElementById('nombres').value.trim(),
+                apellidos: document.getElementById('apellidos').value.trim(),
+                edad: document.getElementById('edad').value.trim(),
+                salud_actual: document.getElementById('salud_actual').value.trim(),
             };
             
-            console.log('Datos capturados:', currentFormData);
+            console.log('Datos capturados:', formData);
             
-            console.log('Cargando cartas...');
+            currentFormData = formData;
+            
+            console.log('Cargando carta...');
             
             try {
-                const cards = await selectThreeCardsRandom();
+                const card = await selectOneCardRandom();
                 
-                console.log('Cartas recibidas:', cards);
+                console.log('Carta recibida:', card);
                 
-                if (cards && cards.past && cards.present && cards.future) {
-                    currentCardsData = cards;
+                if (card && card.name) {
+                    currentCardData = card;
                     
-                    renderModalContent(cards);
+                    renderModalContent(card);
                     
                     openModal();
                 
                     await generateTarotistInterpretation();
                 } else {
-                    console.error('No se pudo cargar las cartas:', cards);
-                    alert('Error al cargar las cartas. Intenta de nuevo.');
+                    console.error('No se pudo cargar la carta:', card);
+                    alert('Error al cargar la carta. Intenta de nuevo.');
                 }
             } catch (error) {
-                console.error('Error al seleccionar cartas:', error);
-                alert('Error al seleccionar las cartas: ' + error.message);
+                console.error('Error al seleccionar carta:', error);
+                alert('Error al seleccionar la carta: ' + error.message);
             }
             
             return false;
@@ -110,27 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Botón de envío no encontrado');
     }
     
-    function renderModalContent(cards) {
-        const { past, present, future } = cards;
-        console.log('Renderizando modal con cartas:', cards);
+    function renderModalContent(card) {
+        console.log('Renderizando modal con carta:', card.name);
         const html = `
             <button class="modal-close" aria-label="Cerrar modal">×</button>
-            <h2 class="modal-title">Tu Lectura de Tres Cartas 🔮</h2>
+            <h2 class="modal-title">Tu Lectura de Una Carta 🔮</h2>
             <div class="cards-container">
                 <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <div class="card-position">Pasado</div>
-                    <img src="${past.image}" alt="${past.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
-                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${past.name}</div>
-                </div>
-                <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <div class="card-position">Presente</div>
-                    <img src="${present.image}" alt="${present.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
-                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${present.name}</div>
-                </div>
-                <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <div class="card-position">Futuro</div>
-                    <img src="${future.image}" alt="${future.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
-                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${future.name}</div>
+                    <img src="${card.image}" alt="${card.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
+                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${card.name}</div>
+                    <div class="card-description">${card.description}</div>
                 </div>
             </div>
             
@@ -166,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             console.log('Solicitando interpretación a Ollama...');
-            const response = await getTarotistInterpretation(currentFormData, currentCardsData);
+            const response = await getTarotistInterpretationOneCard(currentFormData, currentCardData);
             console.log('Respuesta recibida de Ollama');
             
             responseDiv.innerHTML = `<p>${response.replace(/\n/g, '<br>')}</p>`;
@@ -194,13 +181,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openModal() {
     const modal = document.getElementById('myModal');
-    if(modal) modal.classList.add('show');
+    console.log('Abriendo modal...');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        console.log('Modal abierto, clase show agregada');
+    } else {
+        console.error('Modal no encontrado en openModal()');
+    }
 }
 
 function closeModal() {
     const modal = document.getElementById('myModal');
-    if(modal) modal.classList.remove('show');
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    console.log('Cerrando modal...');
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
         window.speechSynthesis.cancel();
+        console.log('Modal cerrado');
     }
 }

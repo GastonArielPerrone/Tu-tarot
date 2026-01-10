@@ -1,165 +1,206 @@
-import { selectCelticCrossRandom } from './selectCelticCross.js';
-import { getTarotistInterpretation } from './ollamaService.js';
-
-let currentFormData = null;
-let currentCardsData = null;
-let ttsEnabled = true;
-
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Cargado - Iniciando script');
+
+    try {
+        const mute = document.querySelector('.muted');
+        if (mute) {
+            const ttsmuted = new SpeechSynthesisUtterance(mute.textContent);
+            ttsmuted.lang = 'es-ES';
+            ttsmuted.rate = 0.80;
+            ttsmuted.pitch = 1.2;
+            ttsmuted.volume = 0.5;
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(ttsmuted);
+        }
+    } catch (error) {
+        console.log('TTS inicial no disponible:', error.message);
+    }
+    
     const form = document.getElementById('celtic-cross-form');
     const modal = document.getElementById('myModal');
-    if (!form || !modal) return;
-
+    
+    console.log('Formulario encontrado:', !!form);
+    console.log('Modal encontrado:', !!modal);
+    
+    if (!form || !modal) {
+        console.error('Error: Formulario o modal no encontrados');
+        return;
+    }
+    
     const modalContent = modal.querySelector('.modal-content');
-
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
-
-    form.addEventListener('submit', (e) => { e.preventDefault(); e.stopPropagation(); return false; }, true);
-
-    const btn = form.querySelector('button[type="submit"]');
-    if (btn) btn.addEventListener('click', async (e) => {
-        e.preventDefault(); e.stopPropagation();
-        const formData = {
-            nombres: document.getElementById('nombres') ? document.getElementById('nombres').value : '',
-            apellidos: document.getElementById('apellidos') ? document.getElementById('apellidos').value : '',
-            edad: document.getElementById('edad') ? document.getElementById('edad').value : '',
-            estado: document.getElementById('estado') ? document.getElementById('estado').value : '',
-            detalle: document.getElementById('detalle') ? document.getElementById('detalle').value : ''
-        };
-        currentFormData = formData;
-
-        const cards = await selectCelticCrossRandom();
-        if (!cards) { alert('Error al cargar cartas.'); return; }
-        currentCardsData = cards;
-
-        renderModalContent(cards);
-        openModal();
-        await generateTarotistInterpretation();
+    
+    if (!modalContent) {
+        console.error('Error: modal-content no encontrado');
+        return;
+    }
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
     });
 
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', async (event) => {
+            console.log('Click en botón capturado');
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (!form.checkValidity()) {
+                console.log('Formulario no válido');
+                form.reportValidity();
+                return false;
+            }
+            
+            const formData = {
+                nombres: document.getElementById('nombres') ? document.getElementById('nombres').value : '',
+                apellidos: document.getElementById('apellidos') ? document.getElementById('apellidos').value : '',
+                edad: document.getElementById('edad') ? document.getElementById('edad').value : '',
+                estado: document.getElementById('estado') ? document.getElementById('estado').value : '',
+                detalle: document.getElementById('detalle') ? document.getElementById('detalle').value : ''
+            };
+            currentFormData = formData;
+            
+            console.log('Datos capturados:', currentFormData);
+            
+            console.log('Cargando cartas...');
+            
+            try {
+                const cards = await selectCelticCrossRandom();
+                
+                console.log('Cartas recibidas:', cards);
+                
+                if (cards) {
+                    currentCardsData = cards;
+                    
+                    renderModalContent(cards);
+                    
+                    openModal();
+                
+                    await generateTarotistInterpretation();
+                } else {
+                    console.error('No se pudo cargar las cartas:', cards);
+                    alert('Error al cargar las cartas. Intenta de nuevo.');
+                }
+            } catch (error) {
+                console.error('Error al seleccionar cartas:', error);
+                alert('Error al seleccionar las cartas: ' + error.message);
+            }
+            
+            return false;
+        });
+    } else {
+        console.error('Botón de envío no encontrado');
+    }
+    
     function renderModalContent(cards) {
+        console.log('Renderizando modal con cartas:', cards);
+        
+        let cardsHTML = '';
+        for (let i = 1; i <= 10; i++) {
+            const card = cards[`pos${i}`];
+            if (card) {
+                cardsHTML += `
+                    <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 10px; min-width: 150px;">
+                        <div class="card-position" style="font-weight: bold; margin-bottom: 5px;">${card.positionName}</div>
+                        <img src="${card.image}" alt="${card.name}" class="card-image" style="max-width: 120px; height: auto; margin-bottom: 10px; border-radius: 8px;">
+                        <div class="card-name" style="font-weight: bold; margin-bottom: 5px; font-size: 0.9em;">${card.name}</div>
+                    </div>
+                `;
+            }
+        }
+
         const html = `
-            <button class="modal-close" onclick="document.getElementById('myModal').classList.remove('show')">×</button>
-            <h2 class="modal-title">Lectura Cruz Celta 🔮</h2>
-            <div class="reading-board-container">
-                <div id="celtic-cross-board">
-                    <div class="center-cross">
-                        ${renderCardHtml(cards.pos1, 1)}
-                        ${renderCardHtml(cards.pos2, 2)}
-                    </div>
-                    ${renderCardHtml(cards.pos3, 3)}
-                    ${renderCardHtml(cards.pos4, 4)}
-                    ${renderCardHtml(cards.pos5, 5)}
-                    ${renderCardHtml(cards.pos6, 6)}
-                    <div class="staff">
-                        ${renderCardHtml(cards.pos7, 7)}
-                        ${renderCardHtml(cards.pos8, 8)}
-                        ${renderCardHtml(cards.pos9, 9)}
-                        ${renderCardHtml(cards.pos10, 10)}
-                    </div>
+            <button class="modal-close" aria-label="Cerrar modal">×</button>
+            <h2 class="modal-title">Tu Lectura de Cruz Celta 🔮</h2>
+            <div class="cards-container" style="display: flex; flex-wrap: wrap; justify-content: center; max-height: 400px; overflow-y: auto;">
+                ${cardsHTML}
+            </div>
+            
+            <!-- Sección Tarotista IA -->
+            <div id="tarotista-section" class="tarotista-ia-section" style="margin-top: 30px; padding: 20px; border: 2px solid #9945ff; border-radius: 10px; background: rgba(153, 69, 255, 0.05);">
+                <h3 style="color: #9945ff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+                    <span>🔮</span>
+                    Interpretación del Tarotista IA
+                </h3>
+                <div id="tarotista-response" style="min-height: 100px; color: #666; line-height: 1.6;">
+                    <p style="color: #999;">Cargando interpretación del Tarotista IA...</p>
                 </div>
             </div>
-
-            <div id="tarotista-section" class="tarotista-ia-section" style="margin-top:20px; padding:16px; border:2px solid #9945ff; border-radius:8px; background:rgba(153,69,255,0.04);">
-                <h3 style="color:#9945ff; margin:0 0 10px 0; display:flex; align-items:center;">🔮 Interpretación del Tarotista IA</h3>
-                <div id="tarotista-response" style="min-height:120px; color:#666; line-height:1.6; white-space:pre-wrap;"></div>
-            </div>
-
-            <button class="modal-close-btn" onclick="document.getElementById('myModal').classList.remove('show')">Cerrar Lectura</button>
+        `;
+        
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+            content.innerHTML = html;
             
-            <div id="card-detail-modal">
-                <div class="card-detail-content"></div>
-            </div>
-        `;
-        modalContent.innerHTML = html;
-
-        // Add click listeners to cards
-        Object.values(cards).forEach((card, index) => {
-            const cardElement = modalContent.querySelector(`.card-pos-${index + 1}`);
-            if (cardElement) {
-                cardElement.addEventListener('click', () => showCardDetailModal(card));
+            const closeBtn = content.querySelector('.modal-close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
             }
-        });
-
-        const detailModal = document.getElementById('card-detail-modal');
-        if (detailModal) {
-            detailModal.addEventListener('click', (e) => {
-                if (e.target === detailModal) {
-                    detailModal.classList.remove('show');
-                }
-            });
         }
     }
-
-    function renderCardHtml(card, position) {
-        if (!card) return '';
-        return `
-            <div class="celtic-card card-pos-${position}">
-                <img src="${card.image}" alt="${card.name}">
-                <div style="font-size:0.85rem; margin-top:6px; color:#FFF;"><strong>${card.positionName}</strong></div>
-                <div style="font-size:0.75rem; color:#666;">${card.name}</div>
-            </div>
-        `;
-    }
-
-    function showCardDetailModal(card) {
-        const detailModal = document.getElementById('card-detail-modal');
-        const detailContent = detailModal.querySelector('.card-detail-content');
-
-        detailContent.innerHTML = `
-            <span class="close-btn" onclick="document.getElementById('card-detail-modal').classList.remove('show')">&times;</span>
-            <h3>${card.name}</h3>
-            <img src="${card.image}" alt="${card.name}">
-            <p>${card.description}</p>
-        `;
-
-        detailModal.classList.add('show');
-    }
-
-    function openModal() { modal.classList.add('show'); }
-    function closeModal() { modal.classList.remove('show'); stopTTS(); }
-
+    
     async function generateTarotistInterpretation() {
-        if (!currentFormData || !currentCardsData) return;
         const responseDiv = document.getElementById('tarotista-response');
-        try {
-            responseDiv.innerHTML = '<p style="color:#999;">Consultando al Tarotista IA...</p>';
-            stopTTS();
-            const interpretation = await getTarotistInterpretation(currentFormData, currentCardsData);
-            displayTextLetterByLetter(responseDiv, interpretation);
-        } catch (error) {
-            responseDiv.innerHTML = `<p style="color:#e74c3c;"><strong>⚠️ Error:</strong> ${error.message}</p>`;
+        if (!responseDiv) {
+            console.error('tarotista-response no encontrado');
+            return;
         }
-    }
-
-    function displayTextLetterByLetter(element, text) {
-        element.innerHTML = '';
-        let index = 0;
-        const speed = 25;
-        const p = document.createElement('p');
-        p.style.whiteSpace = 'pre-wrap';
-        p.style.lineHeight = '1.6';
-        element.appendChild(p);
-
-        const shouldUseSpeech = (typeof window !== 'undefined') && ('speechSynthesis' in window) && ttsEnabled;
-
-        const interval = setInterval(() => {
-            if (index < text.length) {
-                p.textContent += text.charAt(index);
-                index++;
-                element.scrollTop = element.scrollHeight;
-            } else {
-                clearInterval(interval);
-                if (shouldUseSpeech) {
-                    stopTTS();
-                    speakChunk(text);
+        
+        try {
+            console.log('Solicitando interpretación a Ollama...');
+            const response = await getTarotistInterpretation(currentFormData, currentCardsData);
+            console.log('Respuesta recibida de Ollama');
+            
+            responseDiv.innerHTML = `<p>${response.replace(/\n/g, '<br>')}</p>`;
+            
+            if (ttsEnabled) {
+                try {
+                    const utterance = new SpeechSynthesisUtterance(response);
+                    utterance.lang = 'es-ES';
+                    utterance.rate = 0.9;
+                    utterance.pitch = 1.0;
+                    utterance.volume = 1.0;
+                    window.speechSynthesis.speak(utterance);
+                    console.log('TTS iniciado');
+                } catch (ttsError) {
+                    console.error('Error en TTS:', ttsError);
                 }
             }
-        }, speed);
+            
+        } catch (error) {
+            console.error('Error al obtener la interpretación:', error);
+            responseDiv.innerHTML = `<p style="color: #d32f2f;"><strong>Error:</strong> ${error.message}</p>`;
+        }
     }
-
-    function stopTTS() { try { if (typeof window !== 'undefined' && 'speechSynthesis' in window) window.speechSynthesis.cancel(); } catch (e){}}
-    function speakChunk(chunk) { if (!(typeof window !== 'undefined' && 'speechSynthesis' in window)) return; if (!ttsEnabled) return; try { window.speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(chunk); u.lang = 'es-ES'; u.rate = 0.95; window.speechSynthesis.speak(u);} catch(e){}}
-
 });
+
+function openModal() {
+    const modal = document.getElementById('myModal');
+    console.log('Abriendo modal...');
+    if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        console.log('Modal abierto, clase show agregada');
+    } else {
+        console.error('Modal no encontrado en openModal()');
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('myModal');
+    console.log('Cerrando modal...');
+    if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        window.speechSynthesis.cancel();
+        console.log('Modal cerrado');
+    }
+}

@@ -42,7 +42,7 @@ function buildPrompt(formData, cardData) {
     const systemPrompt = `Eres un Tarotista experto y empático. Tu tarea es interpretar las cartas del tarot de manera profunda, considerando el contexto personal del usuario.
 
 Rol: Tarotista
-Instrucciones: Necesito que como tarotista le expliques bien al usuario acerca de la carta que se le asignó considerando la situación amorosa actual mencionada. Por último, resumile el resultado final con consejos constructivos para afrontarlo.
+Instrucciones: Necesito que como tarotista le expliques bien al usuario acerca de la carta que se le asignó considerando la situación actual sobre su salud y bienestar mencionada. Por último, resumile el resultado final con consejos constructivos para afrontarlo.
 
 Importante:
 - Sé empático y considerado en tu interpretación
@@ -54,11 +54,7 @@ Importante:
 Datos del usuario:
 - Nombre: ${formData.nombres} ${formData.apellidos}
 - Edad: ${formData.edad} años
-- Estado sentimental: ${formData.estado}
-${formData.pareja ? `- Pareja: ${formData.pareja}` : ''}
-
-Situación amorosa:
-${formData.situacion}
+- Estado actual de Salud y Bienestar: ${formData.salud_actual}
 
 Carta asignada:
 - ${cardData.name}
