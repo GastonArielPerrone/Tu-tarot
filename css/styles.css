@@ -947,7 +947,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .modal-title {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     color: #fff;
     margin-bottom: 30px;
     text-shadow: 0 0 20px rgba(255, 111, 207, 0.5);
@@ -994,14 +994,14 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .card-name {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #fff;
     font-weight: bold;
     margin: 15px 0;
 }
 
 .card-description {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     margin: 15px 0;
@@ -1046,7 +1046,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
     
     .modal-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
     
     .card-position {
@@ -1054,7 +1054,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
     
     .card-name {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
     .card-image {
         height: auto;
@@ -1416,10 +1416,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         padding: 15px;
     }
     .card-detail-content h3 {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
     }
     .card-detail-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .card-detail-content img {
         width: 120px;
