@@ -2,4 +2,12 @@
 
 # Descripción
 
+# Requerimientos para su uso
+
 # Objetivos generales
+
+# Funcionalidad
+
+# Herramientas utilizadas
+
+# Guía para el usuario / consultante
