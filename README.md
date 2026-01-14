@@ -1,1 +1,1 @@
-<img src='https://github.com/GastonArielPerrone/Tu-tarot/blob/main/static/images/content/sobre_TuTarot.png' width='100%' height='30px'/>
+<img src='https://github.com/GastonArielPerrone/Tu-tarot/blob/main/static/images/content/sobre_TuTarot.png' width='100%' height='100px'/>
