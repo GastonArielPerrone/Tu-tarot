@@ -43,6 +43,7 @@ function buildPrompt(formData, cardData) {
 
 Rol: Tarotista
 Instrucciones: Necesito que como tarotista le expliques bien al usuario acerca de la carta que se le asignó considerando la situación amorosa actual mencionada. Por último, resumile el resultado final con consejos constructivos para afrontarlo.
+Tema: Relación de pareja - Amor.
 
 Importante:
 - Sé empático y considerado en tu interpretación

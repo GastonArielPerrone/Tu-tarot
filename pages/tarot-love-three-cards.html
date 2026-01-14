@@ -57,28 +57,28 @@
                         <div class="full">
                             <label for="estado">Estado sentimental</label>
                             <select id="estado" name="estado">
+                                <option value="--selecciona--">--Selecciona--</option>
+                                <option value="soltero">Soltero/a</option>
                                 <option value="conociendonos">Conociéndonos</option>
-                                <option value="amigos">Amigos desde mucho tiempo</option>
-                                <option value="somos_familiares">Somos familiares</option>
-                                <option value="ex_pero_volviendo">Ex, pero volviendo</option>
+                                <option value="amigos desde hace mucho tiempo">Amigos desde mucho tiempo</option>
+                                <option value="somos familiares">Somos familiares</option>
+                                <option value="ex,pero volviendo">Ex, pero volviendo</option>
                                 <option value="comprometidos">Comprometido/a</option>
                                 <option value="separados">Separado/a</option>
                             </select>
                         </div>
 
                         <div class="full">
-                            <label for="pasado">Pasado: Describe brevemente la relación o experiencias amorosas que consideras relevantes</label>
-                            <textarea id="pasado" name="pasado" placeholder="Por ejemplo: cómo terminó una relación importante, pérdidas, aprendizajes..." required></textarea>
+                            <label for="pasado">Pasado: Cuéntame brevemente los antecedentes de esta situación (¿Cómo empezó todo?)</label>
+                            <textarea id="pasado" name="pasado" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
                         </div>
-
                         <div class="full">
-                            <label for="presente">Presente: ¿Qué sientes ahora respecto al amor o a tu relación actual?</label>
-                            <textarea id="presente" name="presente" placeholder="Por ejemplo: emociones predominantes, dudas, situaciones recientes..." required></textarea>
+                            <label for="presente">Presente: ¿Cómo te sientes hoy respecto a esto? (Describe tu situación actual)</label>
+                            <textarea id="presente" name="presente" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
                         </div>
-
                         <div class="full">
-                            <label for="futuro">Futuro: ¿Qué esperas o temes respecto a tu vida amorosa en los próximos meses?</label>
-                            <textarea id="futuro" name="futuro" placeholder="Metas, miedos, deseos, decisiones que se aproximan..."></textarea>
+                            <label for="futuro">Futuro: ¿Qué resultado esperas obtener o qué te da miedo que pase?</label>
+                            <textarea id="futuro" name="futuro" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
                         </div>
 
                         <div class="full">
@@ -99,9 +99,9 @@
         </div>
     </div>
     </main>
-    <script src="../js/love/three_cards/main-tarot-love-three-cards.js" type="module"></script>
     <footer>
         <p>&copy; 2025 TuTarot. Todos los derechos reservados.</p>
     </footer>
+    <script src="../js/love/three_cards/main-tarot-love-three-cards.js" type="module"></script>
 </body>
 </html>

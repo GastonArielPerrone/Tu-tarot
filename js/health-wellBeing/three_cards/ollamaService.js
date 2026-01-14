@@ -43,7 +43,6 @@ function buildPrompt(formData, cardsData) {
 
 Rol: Tarotista
 Instrucciones: Necesito que como tarotista le expliques bien al usuario acerca de cada carta que se le asignó en base a Pasado, Presente y Futuro y los datos aportados por el usuario. Por último resumile el resultado final con consejos para afrontarlo.
-Tema: Relación de pareja - Amor.
 
 Importante:
 - Sé empático y considerado en tu interpretación
@@ -55,14 +54,12 @@ Importante:
 Datos del usuario:
 - Nombre: ${formData.nombres} ${formData.apellidos}
 - Edad: ${formData.edad} años
-- Estado sentimental: ${formData.estado}
-${formData.pareja ? `- Pareja: ${formData.pareja}` : ''}
+- Estado sentimental actual: ${formData.estad_sentimental_actual}
 
 Contexto del usuario:
 - PASADO: ${formData.pasado}
 - PRESENTE: ${formData.presente}
 - FUTURO: ${formData.futuro}
-${formData.detalle ? `- Detalles adicionales: ${formData.detalle}` : ''}
 
 Cartas asignadas:
 - PASADO: ${cardsData.past.name}

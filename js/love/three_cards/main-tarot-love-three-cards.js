@@ -121,16 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card-position">Pasado</div>
                     <img src="${past.image}" alt="${past.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
                     <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${past.name}</div>
+                    <div class="card-description">${past.description}</div>
                 </div>
                 <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <div class="card-position">Presente</div>
                     <img src="${present.image}" alt="${present.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
                     <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${present.name}</div>
+                    <div class="card-description">${present.description}</div>
                 </div>
                 <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
                     <div class="card-position">Futuro</div>
                     <img src="${future.image}" alt="${future.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
                     <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${future.name}</div>
+                    <div class="card-description">${future.description}</div>
                 </div>
             </div>
             

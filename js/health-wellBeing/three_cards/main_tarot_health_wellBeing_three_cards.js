@@ -1,3 +1,10 @@
+import { selectThreeCardsRandom } from "./select_three_cards.js";
+import { getTarotistInterpretation } from "./ollamaService.js";
+
+let currentFormData = null;
+let currentCardsData = null;
+let ttsEnabled = true;
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Cargado - Iniciando script');
 
@@ -16,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('TTS inicial no disponible:', error.message);
     }
     
-    const form = document.getElementById('celtic-cross-form');
+    const form = document.getElementById('health-wellbeing-three-form');
     const modal = document.getElementById('myModal');
     
     console.log('Formulario encontrado:', !!form);
@@ -59,25 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 return false;
             }
             
-            const formData = {
-                nombres: document.getElementById('nombres') ? document.getElementById('nombres').value : '',
-                apellidos: document.getElementById('apellidos') ? document.getElementById('apellidos').value : '',
-                edad: document.getElementById('edad') ? document.getElementById('edad').value : '',
-                estado: document.getElementById('estado') ? document.getElementById('estado').value : '',
-                detalle: document.getElementById('detalle') ? document.getElementById('detalle').value : ''
+            currentFormData = {
+                nombres: document.getElementById('nombres').value,
+                apellidos: document.getElementById('apellidos').value,
+                edad: document.getElementById('edad').value,
+                estad_sentimental_actual: document.getElementById('estado_sentimental_actual').value,
+                pasado: document.getElementById('pasado').value,
+                presente: document.getElementById('presente').value,
+                futuro: document.getElementById('futuro').value,
             };
-            currentFormData = formData;
             
             console.log('Datos capturados:', currentFormData);
             
             console.log('Cargando cartas...');
             
             try {
-                const cards = await selectCelticCrossRandom();
+                const cards = await selectThreeCardsRandom();
                 
                 console.log('Cartas recibidas:', cards);
                 
-                if (cards) {
+                if (cards && cards.past && cards.present && cards.future) {
                     currentCardsData = cards;
                     
                     renderModalContent(cards);
@@ -101,28 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function renderModalContent(cards) {
+        const { past, present, future } = cards;
         console.log('Renderizando modal con cartas:', cards);
-        
-        let cardsHTML = '';
-        for (let i = 1; i <= 10; i++) {
-            const card = cards[`pos${i}`];
-            if (card) {
-                cardsHTML += `
-                    <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 10px; min-width: 150px;">
-                        <div class="card-position" style="font-weight: bold; margin-bottom: 5px;">${card.positionName}</div>
-                        <img src="${card.image}" alt="${card.name}" class="card-image" style="max-width: 120px; height: auto; margin-bottom: 10px; border-radius: 8px;">
-                        <div class="card-name" style="font-weight: bold; margin-bottom: 5px; font-size: 0.9em;">${card.name}</div>
-                        <div class="card-description">${card.description}</div>
-                    </div>
-                `;
-            }
-        }
-
         const html = `
             <button class="modal-close" aria-label="Cerrar modal">×</button>
-            <h2 class="modal-title">Tu Lectura de Cruz Celta 🔮</h2>
-            <div class="cards-container" style="display: flex; flex-wrap: wrap; justify-content: center; max-height: 400px; overflow-y: auto;">
-                ${cardsHTML}
+            <h2 class="modal-title">Tu Lectura de Tres Cartas 🔮</h2>
+            <div class="cards-container">
+                <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div class="card-position">Pasado</div>
+                    <img src="${past.image}" alt="${past.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
+                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${past.name}</div>
+                    <div class="card-description">${past.description}</div>
+                </div>
+                <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div class="card-position">Presente</div>
+                    <img src="${present.image}" alt="${present.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
+                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${present.name}</div>
+                    <div class="card-description">${present.description}</div>
+                </div>
+                <div class="card-reading" style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <div class="card-position">Futuro</div>
+                    <img src="${future.image}" alt="${future.name}" class="card-image" style="max-width: 250px; height: auto; margin-bottom: 20px; border-radius: 8px;">
+                    <div class="card-name" style="font-weight: bold; margin-bottom: 10px; font-size: 1.2em;">${future.name}</div>
+                    <div class="card-description">${future.description}</div>
+                </div>
             </div>
             
             <!-- Sección Tarotista IA -->
@@ -185,23 +195,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openModal() {
     const modal = document.getElementById('myModal');
-    console.log('Abriendo modal...');
-    if (modal) {
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-        console.log('Modal abierto, clase show agregada');
-    } else {
-        console.error('Modal no encontrado en openModal()');
-    }
+    if(modal) modal.classList.add('show');
 }
 
 function closeModal() {
     const modal = document.getElementById('myModal');
-    console.log('Cerrando modal...');
-    if (modal) {
-        modal.classList.remove('show');
-        document.body.style.overflow = 'auto';
+    if(modal) modal.classList.remove('show');
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
         window.speechSynthesis.cancel();
-        console.log('Modal cerrado');
     }
 }
