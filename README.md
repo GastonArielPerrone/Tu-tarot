@@ -6,6 +6,11 @@
 # Requerimientos para su uso
 Para poder utilizar la funcionalidad de interpretación automática de las cartas, es necesario tener instalado y en ejecución un servidor local de Ollama con un modelo de lenguaje disponible (por ejemplo, `llama2` o `gemma`).
 
+# Adaptabilidad
+- PC/Notebook
+- Tablet
+- Celular
+
 # Objetivos generales
 - Ofrecer una plataforma digital para realizar lecturas de tarot de forma sencilla e intuitiva.
 - Proveer interpretaciones de las cartas generadas por inteligencia artificial para una experiencia más personalizada.
