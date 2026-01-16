@@ -28,7 +28,7 @@ Para poder utilizar la funcionalidad de interpretación automática de las carta
 - Playwright (para testing)
 
 # Guía para el usuario / consultante
-1.  **Elige tu consulta:** Navega a la sección de "Lecturas" y selecciona el área de tu vida sobre la que deseas consultar (por ejemplo, "Amor").
+1.  **Elige tu consulta:** Navega a la sección de "Lecturas" y selecciona el área de tu vida sobre la que deseas consultar (por ejemplo, "Amor"). Otra opción es desde "Inicio" debes mover el carrusel seleccionando por punto hasta encontrar un tema. Por ejemplo: "Tarot para el Amor". Ahí tenés que hacer clic en "Ir".
 2.  **Selecciona una tirada:** Elige el tipo de tirada que prefieras (por ejemplo, "Tres cartas").
 3.  **Completa el formulario:** Completa el formulario para que la IA Tarotista pueda leerte profundamente tu tirada.
 4.  **Clic en el botón de "Barajar y colocar cartas sobre la mesa":** Una vez realizado el clic, el programa barajará y en un modal/recuadro
