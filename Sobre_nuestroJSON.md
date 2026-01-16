@@ -20,6 +20,7 @@ Ruta de la API: https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tar
 # Estructura del JSON
 
 | Campo | Tipo |
+| :--- | :--- |
 | id | String |
 | name | String |
 | arcana | String |
