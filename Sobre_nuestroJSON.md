@@ -14,3 +14,6 @@ fetch("https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.j
 .catch(function(error){
 // Acción a realizar
 });
+```
+
+# Estructura del JSON
