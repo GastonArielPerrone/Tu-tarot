@@ -23,7 +23,7 @@ Para poder utilizar la funcionalidad de interpretación automática de las carta
 - HTML5
 - CSS3
 - JavaScript
-- JSON
+- <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/Sobre_nuestroJSON.md">JSON</a>
 - Ollama (para el servicio de IA)
 - Playwright (para testing)
 
