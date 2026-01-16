@@ -38,4 +38,6 @@ Para poder utilizar la funcionalidad de interpretación automática de las carta
 3.  **Completa el formulario:** Completa el formulario para que la IA Tarotista pueda leerte profundamente tu tirada.
 4.  **Clic en el botón de "Barajar y colocar cartas sobre la mesa":** Una vez realizado el clic, el programa barajará y en un modal/recuadro
 te colocará las cartas seleccionadas aleatoriamente.
-1.  **Lectura de la IA:** Este paso puede tardar unos minutos. Solo debes esperar a que la IA Tarotista reflexione y te de la devolución de tu consulta.
+5.  **Lectura de la IA:** Este paso puede tardar unos minutos. Solo debes esperar a que la IA Tarotista reflexione y te de la devolución de tu consulta.
+
+# Datos del desarrollador
