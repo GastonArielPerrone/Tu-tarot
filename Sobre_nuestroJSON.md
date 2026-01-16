@@ -15,5 +15,16 @@ fetch("https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.j
 // Acción a realizar
 });
 ```
+Ruta de la API: https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.json
 
 # Estructura del JSON
+
+| Campo | Tipo |
+| id | String |
+| name | String |
+| arcana | String |
+| suit | Null |
+| number | Interger |
+| keywords | Array |
+| description | String |
+| image_path | String |
