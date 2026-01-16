@@ -8,4 +8,7 @@
 ```JavaScript
 fetch("https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.json")
 .then(respone => response.json())
-.then(data => console.log(data));
+.then(data => console.log(data))
+.catch(function(error){
+// Acción a realizar
+});
