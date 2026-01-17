@@ -48,4 +48,5 @@ ollama run llama2
 Este proyecto es open source y se distribuye bajo licencia MIT.
 
 Copyright (c) 2025
+
 Gastón Ariel Perrone
