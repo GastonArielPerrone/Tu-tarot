@@ -24,7 +24,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-- JSON
+- <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/Sobre_nuestroJSON.md">JSON</a>
 - Ollama (IA local)
 - Playwright (testing)
 
