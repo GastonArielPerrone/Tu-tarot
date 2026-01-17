@@ -43,7 +43,7 @@ Ejemplo:
 ollama run llama2
 ```
 
-# 📄 Licencia
+## 📄 Licencia
 
 Este proyecto es open source y se distribuye bajo licencia MIT.
 
@@ -51,7 +51,7 @@ Copyright (c) 2025
 
 Gastón Ariel Perrone
 
-# 👨‍💻 Autor
+## 👨‍💻 Autor
 
 Gastón Ariel Perrone
 
