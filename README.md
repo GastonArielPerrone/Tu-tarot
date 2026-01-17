@@ -50,3 +50,15 @@ Este proyecto es open source y se distribuye bajo licencia MIT.
 Copyright (c) 2025
 
 Gastón Ariel Perrone
+
+# 👨‍💻 Autor
+
+Gastón Ariel Perrone
+
+Desarrollador de Software
+
+📍 Buenos Aires, Argentina
+
+GitHub: https://github.com/GastonArielPerrone
+
+LinkedIn: https://www.linkedin.com/in/gaston-ariel-perrone/
