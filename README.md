@@ -41,3 +41,7 @@ te colocará las cartas seleccionadas aleatoriamente.
 5.  **Lectura de la IA:** Este paso puede tardar unos minutos. Solo debes esperar a que la IA Tarotista reflexione y te de la devolución de tu consulta.
 
 # Datos del desarrollador
+* Nombre completo: Gastón Ariel Perrone
+* Nacionalidad: Argentina
+* Residencia: CABA, Buenos Aires, Argentina
+* LinkedIn: https://www.linkedin.com/in/gaston-ariel-perrone/
