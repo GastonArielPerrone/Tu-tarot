@@ -34,7 +34,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 
 Para utilizar la interpretación automática con IA es necesario:
 
-- Tener instalado **Ollama**
+- Tener instalado <a href="https://ollama.com/download">**Ollama**</a>
 - Tener un modelo disponible (ej: `llama2`, `gemma`)
 - Ejecutar el servidor local de Ollama antes de usar la app
 
