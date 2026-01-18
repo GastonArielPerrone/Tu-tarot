@@ -30,74 +30,76 @@
         </nav>
     </header>
     <main>
-        <h1 class="page-title">Tarot para el Amor - 3 Cartas</h1>
-        <section class="form-wrap">
-            <div class="neon-container" aria-labelledby="form-title">
-                <h2 id="form-title">Formulario: Lectura de 3 cartas (Amor)</h2>
-                <p class="muted">Completa los datos y responde brevemente para ayudar a interpretar pasado, presente y futuro.</p>
-                <form id="love-three-form" class="love-form" action="javascript:void(0);" method="post" onsubmit="return false;">
-                    <div class="form-grid">
-                        <div>
-                            <label for="nombres">Nombre/s</label>
-                            <input id="nombres" name="nombres" type="text" placeholder="Tus nombres" required>
-                        </div>
-                        <div>
-                            <label for="apellidos">Apellido/s</label>
-                            <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required>
-                        </div>
-                        <div>
-                            <label for="edad">Edad</label>
-                            <input id="edad" name="edad" type="number" min="0" max="120" placeholder="Tu edad" required>
-                        </div>
-                        <div>
-                            <label for="pareja">Nombre completo de la pareja</label>
-                            <input id="pareja" name="pareja" type="text" placeholder="Nombre completo (si aplica)">
+        <section class="background-white-transparent">
+            <h1 class="page-title">Tarot para el Amor - 3 Cartas</h1>
+            <section class="form-wrap">
+                <div class="neon-container" aria-labelledby="form-title">
+                    <h2 id="form-title">Formulario: Lectura de 3 cartas (Amor)</h2>
+                    <p class="muted">Completa los datos y responde brevemente para ayudar a interpretar pasado, presente y futuro.</p>
+                    <form id="love-three-form" class="love-form" action="javascript:void(0);" method="post" onsubmit="return false;">
+                        <div class="form-grid">
+                            <div>
+                                <label for="nombres">Nombre/s</label>
+                                <input id="nombres" name="nombres" type="text" placeholder="Tus nombres" required>
+                            </div>
+                            <div>
+                                <label for="apellidos">Apellido/s</label>
+                                <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required>
+                            </div>
+                            <div>
+                                <label for="edad">Edad</label>
+                                <input id="edad" name="edad" type="number" min="0" max="120" placeholder="Tu edad" required>
+                            </div>
+                            <div>
+                                <label for="pareja">Nombre completo de la pareja</label>
+                                <input id="pareja" name="pareja" type="text" placeholder="Nombre completo (si aplica)">
+                            </div>
+
+                            <div class="full">
+                                <label for="estado">Estado sentimental</label>
+                                <select id="estado" name="estado">
+                                    <option value="--selecciona--">--Selecciona--</option>
+                                    <option value="soltero">Soltero/a</option>
+                                    <option value="conociéndonos">Conociéndonos</option>
+                                    <option value="amigos desde hace mucho tiempo">Amigos desde mucho tiempo</option>
+                                    <option value="somos familiares">Somos familiares</option>
+                                    <option value="ex,pero volviendo">Ex, pero volviendo</option>
+                                    <option value="comprometidos">Comprometido/a</option>
+                                    <option value="separados">Separado/a</option>
+                                </select>
+                            </div>
+
+                            <div class="full">
+                                <label for="pasado">Pasado: Cuéntame brevemente los antecedentes de esta situación (¿Cómo empezó todo?)</label>
+                                <textarea id="pasado" name="pasado" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
+                            </div>
+                            <div class="full">
+                                <label for="presente">Presente: ¿Cómo te sientes hoy respecto a esto? (Describe tu situación actual)</label>
+                                <textarea id="presente" name="presente" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
+                            </div>
+                            <div class="full">
+                                <label for="futuro">Futuro: ¿Qué resultado esperas obtener o qué te da miedo que pase?</label>
+                                <textarea id="futuro" name="futuro" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
+                            </div>
+
+                            <div class="full">
+                                <label for="detalle">Detalle adicional (opcional)</label>
+                                <textarea id="detalle" name="detalle" placeholder="Cualquier dato puntual: fechas, separaciones, reconciliaciones, hijos, distancia, etc."></textarea>
+                            </div>
                         </div>
 
-                        <div class="full">
-                            <label for="estado">Estado sentimental</label>
-                            <select id="estado" name="estado">
-                                <option value="--selecciona--">--Selecciona--</option>
-                                <option value="soltero">Soltero/a</option>
-                                <option value="conociéndonos">Conociéndonos</option>
-                                <option value="amigos desde hace mucho tiempo">Amigos desde mucho tiempo</option>
-                                <option value="somos familiares">Somos familiares</option>
-                                <option value="ex,pero volviendo">Ex, pero volviendo</option>
-                                <option value="comprometidos">Comprometido/a</option>
-                                <option value="separados">Separado/a</option>
-                            </select>
-                        </div>
-
-                        <div class="full">
-                            <label for="pasado">Pasado: Cuéntame brevemente los antecedentes de esta situación (¿Cómo empezó todo?)</label>
-                            <textarea id="pasado" name="pasado" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
-                        </div>
-                        <div class="full">
-                            <label for="presente">Presente: ¿Cómo te sientes hoy respecto a esto? (Describe tu situación actual)</label>
-                            <textarea id="presente" name="presente" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
-                        </div>
-                        <div class="full">
-                            <label for="futuro">Futuro: ¿Qué resultado esperas obtener o qué te da miedo que pase?</label>
-                            <textarea id="futuro" name="futuro" rows="4" placeholder="Tu descripción aquí ..." required></textarea>
-                        </div>
-
-                        <div class="full">
-                            <label for="detalle">Detalle adicional (opcional)</label>
-                            <textarea id="detalle" name="detalle" placeholder="Cualquier dato puntual: fechas, separaciones, reconciliaciones, hijos, distancia, etc."></textarea>
-                        </div>
-                    </div>
-
-                    <p class="muted">Al enviar, las cartas se barajarán y se colocarán sobre la mesa para la lectura.</p>
-                    <button class="btn-neon" type="submit" aria-label="Barajar y colocar cartas">Barajar y colocar cartas sobre la mesa</button>
-                </form>
+                        <p class="muted">Al enviar, las cartas se barajarán y se colocarán sobre la mesa para la lectura.</p>
+                        <button class="btn-neon" type="submit" aria-label="Barajar y colocar cartas">Barajar y colocar cartas sobre la mesa</button>
+                    </form>
+                </div>
+            </section>
+            <!-- Modal Container -->
+        <div id="myModal" class="modal-container">
+            <div class="modal-content">
+                <!-- Content generated by JavaScript -->
             </div>
-        </section>
-        <!-- Modal Container -->
-    <div id="myModal" class="modal-container">
-        <div class="modal-content">
-            <!-- Content generated by JavaScript -->
         </div>
-    </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 TuTarot. Todos los derechos reservados.</p>

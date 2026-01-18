@@ -31,7 +31,6 @@ body {
     background-attachment: fixed;
     color: var(--text-color);
     font-size: 62.5%;
-    overflow-x: hidden;
 }
 
 .love-button {
@@ -400,7 +399,7 @@ main a:hover {
     text-decoration: underline;
 }
 
-.updates, .about__read {
+.updates, .about__read, .background-white-transparent {
     background-color: var(--slide-background);
     padding: 20px;
     margin: 20px;
@@ -487,6 +486,14 @@ footer p {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {

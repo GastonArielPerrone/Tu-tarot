@@ -30,61 +30,63 @@
         </nav>
     </header>
     <main>
-       <h1 class="page-title">Tarot para el Amor - Una Carta</h1>
-        <section class="form-wrap">
-            <div class="neon-container" aria-labelledby="form-title">
-                <h2 id="form-title">Formulario: Lectura de una carta (Amor)</h2>
-                <p class="muted">Completa los datos y responde brevemente para ayudar a interpretar la situación amorosa actual.</p>
-                <form id="love-one-form" class="love-form" action="javascript:void(0);" method="post" onsubmit="return false;">
-                    <div class="form-grid">
-                        <div>
-                            <label for="nombres">Nombre/s</label>
-                            <input id="nombres" name="nombres" type="text" placeholder="Tus nombres" required>
-                        </div>
-                        <div>
-                            <label for="apellidos">Apellido/s</label>
-                            <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required>
-                        </div>
-                        <div>
-                            <label for="edad">Edad</label>
-                            <input id="edad" name="edad" type="number" min="0" max="120" placeholder="Tu edad" required>
-                        </div>
-                        <div>
-                            <label for="pareja">Nombre completo de la pareja</label>
-                            <input id="pareja" name="pareja" type="text" placeholder="Nombre completo (si aplica)">
-                        </div>
+        <section class="background-white-transparent">
+            <h1 class="page-title">Tarot para el Amor - Una Carta</h1>
+                <section class="form-wrap">
+                    <div class="neon-container" aria-labelledby="form-title">
+                        <h2 id="form-title">Formulario: Lectura de una carta (Amor)</h2>
+                        <p class="muted">Completa los datos y responde brevemente para ayudar a interpretar la situación amorosa actual.</p>
+                        <form id="love-one-form" class="love-form" action="javascript:void(0);" method="post" onsubmit="return false;">
+                            <div class="form-grid">
+                                <div>
+                                    <label for="nombres">Nombre/s</label>
+                                    <input id="nombres" name="nombres" type="text" placeholder="Tus nombres" required>
+                                </div>
+                                <div>
+                                    <label for="apellidos">Apellido/s</label>
+                                    <input id="apellidos" name="apellidos" type="text" placeholder="Tus apellidos" required>
+                                </div>
+                                <div>
+                                    <label for="edad">Edad</label>
+                                    <input id="edad" name="edad" type="number" min="0" max="120" placeholder="Tu edad" required>
+                                </div>
+                                <div>
+                                    <label for="pareja">Nombre completo de la pareja</label>
+                                    <input id="pareja" name="pareja" type="text" placeholder="Nombre completo (si aplica)">
+                                </div>
 
-                        <div class="full">
-                            <label for="estado">Estado de relación</label>
-                            <select id="estado" name="estado" required>
-                                <option value="">Selecciona una opción</option>
-                                <option value="conociendonos">Conociéndonos</option>
-                                <option value="amigos">Amigos desde mucho tiempo</option>
-                                <option value="somos_familiares">Somos familiares</option>
-                                <option value="ex_pero_volviendo">Ex, pero volviendo</option>
-                                <option value="comprometidos">Comprometido/a</option>
-                                <option value="separados">Separado/a</option>
-                                <option value="soltero">Soltero/a</option>
-                            </select>
-                        </div>
+                                <div class="full">
+                                    <label for="estado">Estado de relación</label>
+                                    <select id="estado" name="estado" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="conociendonos">Conociéndonos</option>
+                                        <option value="amigos">Amigos desde mucho tiempo</option>
+                                        <option value="somos_familiares">Somos familiares</option>
+                                        <option value="ex_pero_volviendo">Ex, pero volviendo</option>
+                                        <option value="comprometidos">Comprometido/a</option>
+                                        <option value="separados">Separado/a</option>
+                                        <option value="soltero">Soltero/a</option>
+                                    </select>
+                                </div>
 
-                        <div class="full">
-                            <label for="situacion">Situación actual y contexto</label>
-                            <textarea id="situacion" name="situacion" placeholder="Describe tu situación amorosa actual, qué te preocupa, qué esperas..." required></textarea>
-                        </div>    
+                                <div class="full">
+                                    <label for="situacion">Situación actual y contexto</label>
+                                    <textarea id="situacion" name="situacion" placeholder="Describe tu situación amorosa actual, qué te preocupa, qué esperas..." required></textarea>
+                                </div>    
+                            </div>
+
+                            <p class="muted">Al enviar, las cartas se barajarán y se colocará una sobre la mesa para la lectura.</p>
+                            <button class="btn-neon" type="submit" aria-label="Barajar y colocar carta">Barajar y colocar carta sobre la mesa</button>
+                        </form>
                     </div>
-
-                    <p class="muted">Al enviar, las cartas se barajarán y se colocará una sobre la mesa para la lectura.</p>
-                    <button class="btn-neon" type="submit" aria-label="Barajar y colocar carta">Barajar y colocar carta sobre la mesa</button>
-                </form>
-            </div>
+                </section>
+                <!-- Modal Container -->
+                <div id="myModal" class="modal-container">
+                    <div class="modal-content">
+                        <!-- Content generated by JavaScript -->
+                    </div>
+                </div>
         </section>
-        <!-- Modal Container -->
-        <div id="myModal" class="modal-container">
-            <div class="modal-content">
-                <!-- Content generated by JavaScript -->
-            </div>
-        </div>
     </main>
     <footer>
         <p>&copy; 2025 TuTarot. Todos los derechos reservados.</p>
