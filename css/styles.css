@@ -380,12 +380,12 @@ main h1, h1 {
 }
 
 main h2, h2 {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     margin-bottom: 15px;
 }
 
 main p, p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     line-height: 1.6;
 }
 
@@ -400,7 +400,7 @@ main a:hover {
     text-decoration: underline;
 }
 
-.updates {
+.updates, .about__read {
     background-color: var(--slide-background);
     padding: 20px;
     margin: 20px;
@@ -411,6 +411,44 @@ main a:hover {
     text-decoration: underline;
 }
 
+.tarot-love {
+    background-image: url("../static/images/content/slides/tarot-para-el-amor.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
+.tarot-work {
+    background-image: url("../static/images/content/slides/tarot-para-el-trabajo.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
+
+.tarot-health-wellBeing {
+    background-image: url("../static/images/content/slides/tarot-para-salud-y-bienestar.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 4px var(--header-box-shadow) !important;
+    width: 400px !important;
+    padding: 26px !important;
+    text-align: center !important;
+    transition: transform 0.3s !important;
+}
 /* Footer */
 footer {
     background-color: var(--header);
@@ -538,7 +576,7 @@ nav ul li a:hover {
     color: var(--text-color) !important;
 }
 
-.type-tarot-option-flex {
+.type-tarot-option-flex, .tarot-options{
     display: flex !important;
     justify-content: center !important;
     gap: 20px !important;
@@ -589,7 +627,7 @@ nav ul li a:hover {
     transition: transform 0.3s !important;
 }
 
-.tarot-type-cards {
+.tarot-type-cards, .button-option {
     font-size: 1.6rem !important;
     font-weight: bold !important;
 }
@@ -601,7 +639,22 @@ div.tarot-type-cards:hover {
     cursor: url("../static/images/content/pointer/pointer-hover.png") 16 16, pointer !important;
 }
 
-div.tarot-type-cards:active {
+div.button-option:active {
+    background-color: var(--button-hover) !important;
+    color: var(--background-color) !important;
+    border: var(--text-color) 2.5px solid !important;
+    box-shadow: var(--text-color) 0 0 10px !important;
+    cursor: url("../static/images/content/pointer/pointer-click.png") 16 16, pointer !important;
+}
+
+div.tarot-type-cards:hover {
+    background-color: var(--text-color)!important;
+    opacity: 0.9 !important;
+    color: var(--background-color) !important;
+    cursor: url("../static/images/content/pointer/pointer-hover.png") 16 16, pointer !important;
+}
+
+div.button-option:active {
     background-color: var(--button-hover) !important;
     color: var(--background-color) !important;
     border: var(--text-color) 2.5px solid !important;
@@ -742,11 +795,11 @@ div.tarot-type-cards:active {
     }
 
     main h2, h2 {
-        font-size: 1.4rem;
+        font-size: 2.2rem;
     }
 
     main p, p {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
     }
 
     .updates {
@@ -1072,11 +1125,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
 
     main h2, h2 {
-        font-size: 1.2rem;
+        font-size: 2.0rem;
     }
 
     main p, p {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .updates {
@@ -1135,7 +1188,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     }
 
     main h2, h2 {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 }
 
