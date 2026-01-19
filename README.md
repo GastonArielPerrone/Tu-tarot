@@ -57,7 +57,7 @@ Gastón Ariel Perrone
 
 Desarrollador de Software
 
-📍 Buenos Aires, Argentina
+📍 Ciudad Atónoma de Buenos Aires, Buenos Aires, Argentina
 
 GitHub: https://github.com/GastonArielPerrone
 
