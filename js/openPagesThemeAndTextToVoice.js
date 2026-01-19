@@ -1,4 +1,15 @@
 openPageTheme();
+textToVoice();
+
+function textToVoice() {
+    const textElement = document.getElementById('text-to-voice');
+    const textContent = textElement.textContent;
+    const utterance = new SpeechSynthesisUtterance(textContent);
+    utterance.lang = 'es-ES';
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
+}
 
 function openPageTheme() {
 const imageButtons = document.querySelectorAll('.button-option');
