@@ -73,7 +73,7 @@ function renderCelticCross(container, cards, formData) {
     `;
 
     container.innerHTML = `
-    <button class="modal-close" aria-label="Cerrar modal">×</button>
+    <button class="modal-close" aria-label="Cerrar modal">×</button>    
         <h2 class="modal-title">Tu Lectura de Cruz Celta</h2>
         <div class="reading-board-container">
             <div id="celtic-cross-board">${cardPositions}</div>
@@ -115,7 +115,7 @@ function showCardDetail(card) {
 
     detailModal.classList.add('show');
 
-    const closeBtn = detailModal.querySelector('.close-btn');
+    const closeBtn = detailModal.querySelector('.modal-close');
     closeBtn.onclick = () => detailModal.classList.remove('show');
 
     window.onclick = (event) => {
@@ -127,7 +127,7 @@ function showCardDetail(card) {
 
 
 function addCloseButtonLogic(modal) {
-    const closeButton = modal.querySelector('.modal-close');
+    const closeButton = modal.querySelector('.modal-close-btn');
     if (closeButton) {
         closeButton.onclick = () => modal.classList.remove('show');
     }

@@ -6,7 +6,7 @@
     <meta name="description" content="TuTarot - Descubre el poder del tarot con nuestras lecturas personalizadas y cartas detalladas. Explora el amor, trabajo y bienestar a través del tarot.">
     <link rel="stylesheet" href="../css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
-    <title>TuTarot :: Tarot para el Trabajo 💼</title>
+    <title>TuTarot :: Tarot para la Salud y Bienestar 💖 :: Cruz Celta</title>
 </head>
 <body>
     <header class="header-flex">
@@ -31,8 +31,42 @@
     </header>
     <main>
         <section class="background-white-transparent">
-            <img src="../static/images/content/note_page_is_founding.png" alt="Cartel de página en construcción" class="content-image">
+            <h1 class="page-title">Tarot Cruz Celta 🔮</h1>
+            <div class="neon-container" aria-labelledby="form-title">
+            <p class="muted">Completá el formulario y obtené una lectura detallada en la disposición Cruz Celta.</p>
+
+            <form id="celtic-cross-form" class="tarot-form" action="javascript:void(0);" method="post" onsubmit="return false;">
+                <div class="form-row">
+                    <label for="nombres">Nombres</label>
+                    <input id="nombres" name="nombres" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="apellidos">Apellidos</label>
+                    <input id="apellidos" name="apellidos" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="edad">Edad</label>
+                    <input id="edad" name="edad" type="number" min="0" required>
+                </div>
+                <div class="form-row">
+                    <label for="estado">Estado de Salud y Bienestar</label>
+                    <input id="estado" name="estado" type="text" required>
+                </div>
+                <div class="form-row">
+                    <label for="detalle">Detalles / Pregunta</label>
+                    <textarea id="detalle" name="detalle" rows="3" required></textarea>
+                </div>
+                <p class="muted">Al enviar, las cartas se barajarán y se colocarán diez sobre la mesa para la lectura.</p>
+                <button type="submit" class="btn-neon">Realizar Lectura Cruz Celta</button>
+            </form>
+            </div>
+
+            <div id="myModal" class="modal-container">
+                <div class="modal-content"></div>
+            </div>
         </section>
+
+        <script type="module" src="../js/health-wellBeing/celtic_cross/main-tarot-celtic-cross.js"></script>
     </main>
     <footer>
         <p>&copy; 2025 TuTarot. Todos los derechos reservados.</p>
