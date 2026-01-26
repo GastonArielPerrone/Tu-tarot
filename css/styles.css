@@ -112,7 +112,6 @@ nav ul li a:active {
     color: var(--button-hover);
 }
 
-/* Menu hamburguesa */
 .menu-toggle {
     display: none;
 }
@@ -131,7 +130,6 @@ nav ul li a:active {
     color: var(--primary-color);
 }
 
-/* Clase para mostrar el menú en dispositivos pequeños */
 #menu-toggle:checked ~ nav ul {
     display: flex !important;
 }
@@ -161,7 +159,6 @@ nav ul li a:active {
     color: var(--button-hover);
 }
 
-/* Estilos para el menú apilado cuando está abierto */
 #menu-toggle:checked ~ nav ul {
     flex-direction: column !important;
     gap: 0 !important;
@@ -210,7 +207,6 @@ section ul li {
     margin-bottom: 10px;
 }
 
-/* Sliders */
 .container-slider {
     display: flex;
     gap: 20px;
@@ -321,7 +317,6 @@ section ul li {
    flex-shrink: 0;
 }
 
-/* Content slides */
 .firstslide {
     background-image: url('../static/images/content/slides/tarot-de-cartas.png');
     background-size: 100% auto;
@@ -369,7 +364,6 @@ section ul li {
     letter-spacing: 0.5px;
 }
 
-/* Ensure slide container allows absolute children */
 .firstslide, .secondslide, .thirdslide, .fourthslide {
     position: relative;
 }
@@ -449,7 +443,7 @@ main a:hover {
     text-align: center !important;
     transition: transform 0.3s !important;
 }
-/* Footer */
+
 footer {
     background-color: var(--header);
     padding: 20px;
@@ -459,11 +453,9 @@ footer {
 
 footer p {
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem !important;
     margin: 0;
 }
-
-/* Nuestras Cartas */
 
 .main-flex {
     display: flex;
@@ -528,7 +520,6 @@ nav ul li a {
     font-size: 40px !important;
 }
 
-/* Restaurar hover amarillo en el nav */
 nav ul li a:hover {
     color: var(--primary-color) !important;
 }
@@ -698,6 +689,18 @@ div.button-option:active {
         display: flex !important;
         flex-direction: row !important;
         gap: 20px !important;
+    }
+
+    section ul li {
+        font-size: 1.4rem !important;
+    }
+
+    section p {
+        font-size: 1.6rem !important;
+    }
+
+    footer p {
+        font-size: 1.4rem !important;
     }
 }
 
