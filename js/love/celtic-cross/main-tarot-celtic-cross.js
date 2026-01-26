@@ -40,6 +40,7 @@ async function handleFormSubmit(event) {
         const interpretationElement = document.getElementById('tarotista-response');
         if (interpretationElement) {
             interpretationElement.textContent = interpretation;
+            textToSpeech(interpretation);
         }
 
     } catch (error) {
@@ -125,6 +126,18 @@ function showCardDetail(card) {
     };
 }
 
+function textToSpeech(text) {
+    if (!text) return;
+
+    window.speechSynthesis.cancel();
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = 'es-ES';
+    speech.rate = 0.95;   
+    speech.pitch = 1.05;  
+
+    window.speechSynthesis.speak(speech);
+}
 
 function addCloseButtonLogic(modal) {
     const closeButton = modal.querySelector('.modal-close');
