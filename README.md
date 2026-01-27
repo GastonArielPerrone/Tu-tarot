@@ -26,7 +26,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 - JavaScript
 - <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/Sobre_nuestroJSON.md">JSON</a>
 - Ollama (IA local)
-- TexToVoice (Lectura mediante la voz)
+- TexToSpeech (Lectura mediante la voz)
 - Playwright (testing)
 
 ---
