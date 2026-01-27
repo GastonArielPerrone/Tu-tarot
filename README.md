@@ -46,7 +46,7 @@ ollama run llama2
 
 ## 📄 Licencia
 
-Este proyecto es open source y se distribuye bajo licencia MIT.
+Este proyecto es open source y se distribuye bajo <a href="">licencia MIT</a>.
 
 Copyright (c) 2025
 
