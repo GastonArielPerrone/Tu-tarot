@@ -21,13 +21,13 @@ Ruta de la API: https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tar
 
 ```txt
 {
- id: String,
- name: String,
- arcana: String, 
- suit: Null, 
- number: Integer,
- keywords: Array,
- description: String,
- image_path: String
+ id: "string",
+ name: "string",
+ arcana: "string", 
+ suit: "null", 
+ number: "integer",
+ keywords: "array",
+ description: "string",
+ image_path: "string"
 }
 ```
