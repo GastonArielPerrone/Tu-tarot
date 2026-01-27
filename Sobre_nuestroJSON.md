@@ -6,6 +6,8 @@ Nuestro JSON se basa en los datos de todas las cartas existentes del Tarot gener
 Para llamarla, el deasarrollador deberá colocar la siguiente sintaxis:
 
 En JavaScript
+
+Copia y pega en tu archivo .js el siguiente código:
 ```JavaScript
 fetch("https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.json")
 .then(respone => response.json())
@@ -19,11 +21,11 @@ fetch("https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tarot_deck.j
 
 En Python
 
-1: Abrir una terminal dentro del proyecto (Bash recomendado) y copiar el siguiente comando para instalar "request".
+1: Abre una terminal dentro del proyecto (Bash recomendado) y copiar el siguiente comando para instalar "request".
 ```Bash
 pip install request
 ```
-2: 
+2: copia y pega en tu archivo .py el siguiente código:
 ```Python
 import requests
 
