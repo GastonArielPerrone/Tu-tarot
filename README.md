@@ -46,7 +46,7 @@ ollama run llama2
 
 ## 📄 Licencia
 
-Este proyecto es open source y se distribuye bajo <a href="">licencia MIT</a>.
+Este proyecto es open source y se distribuye bajo <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/LICENSE.md">licencia MIT</a>.
 
 Copyright (c) 2025
 
