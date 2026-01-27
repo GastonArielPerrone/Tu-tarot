@@ -25,7 +25,7 @@ Ruta de la API: https://github.com/GastonArielPerrone/Tu-tarot/blob/main/API/tar
  name: String,
  arcana: String, 
  suit: Null, 
- number: Int,
+ number: Integer,
  keywords: Array,
  description: String,
  image_path: String
