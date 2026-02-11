@@ -745,6 +745,10 @@ div.button-option:active {
     .love-button {
         bottom: 100px !important;
     }
+
+    .avatar {
+        max-width: 350px;
+    }
 }
 
 /* DISPOSITIVOS PEQUEÑOS: 767px o menos - Solo hamburguesa */
@@ -771,6 +775,10 @@ div.button-option:active {
     .logo {
         height: 60px;
     }
+
+    .avatar {
+        max-width: 300px;
+    }   
 }
 
 /* MÓVIL GRANDE: 481px a 767px */
@@ -827,6 +835,10 @@ div.button-option:active {
 
     section ul li {
         font-size: 1.2rem;
+    }
+
+    .avatar {
+        max-width: 250px;
     }
 }
 
