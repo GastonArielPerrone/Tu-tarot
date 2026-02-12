@@ -34,6 +34,33 @@ body {
     font-size: 62.5%;
 }
 
+section > h1 {
+    font-size: 2.8rem !important;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+section > h2 {
+    font-size: 2.4rem !important;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.ollama-logo {
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.0rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--text-color-black);
+}
+
 .love-button {
     position: absolute;
     bottom: 60px;
@@ -749,6 +776,12 @@ div.button-option:active {
     .avatar {
         max-width: 350px;
     }
+
+    .ollama-logo {
+    height: 170px;
+    display: block;
+    margin: auto;
+}
 }
 
 /* DISPOSITIVOS PEQUEÑOS: 767px o menos - Solo hamburguesa */
@@ -778,7 +811,13 @@ div.button-option:active {
 
     .avatar {
         max-width: 300px;
-    }   
+    }
+    
+    .ollama-logo {
+    height: 170px;
+    display: block;
+    margin: auto;
+}
 }
 
 /* MÓVIL GRANDE: 481px a 767px */
@@ -840,6 +879,12 @@ div.button-option:active {
     .avatar {
         max-width: 250px;
     }
+
+    .ollama-logo {
+    height: 150px;
+    display: block;
+    margin: auto;
+}
 }
 
 /* MÓVIL PEQUEÑO: 320px a 480px */
@@ -882,6 +927,12 @@ div.button-option:active {
         width: 12px !important;
         height: 12px !important;
     }
+
+    .ollama-logo {
+    height: 140px;
+    display: block;
+    margin: auto;
+}
 }
 
 /* ===== Estilos para el formulario de Tarot - 3 Cartas (Amor) ===== */
