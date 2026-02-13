@@ -438,7 +438,7 @@ main a:hover {
 
 .underline {
     text-decoration: underline;
-    color: var(--text-color-black);
+    color: var(--text-color-black) !important;
 }
 
 .tarot-love {
