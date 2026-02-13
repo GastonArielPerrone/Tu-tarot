@@ -61,6 +61,14 @@ code {
     color: var(--text-color-black);
 }
 
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--header-box-shadow);
+}
+
 .love-button {
     position: absolute;
     bottom: 60px;
@@ -778,10 +786,16 @@ div.button-option:active {
     }
 
     .ollama-logo {
-    height: 170px;
-    display: block;
-    margin: auto;
-}
+        height: 170px;
+        display: block;
+        margin: auto;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
 }
 
 /* DISPOSITIVOS PEQUEÑOS: 767px o menos - Solo hamburguesa */
@@ -814,10 +828,16 @@ div.button-option:active {
     }
     
     .ollama-logo {
-    height: 170px;
-    display: block;
-    margin: auto;
-}
+        height: 170px;
+        display: block;
+        margin: auto;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
 }
 
 /* MÓVIL GRANDE: 481px a 767px */
@@ -881,10 +901,16 @@ div.button-option:active {
     }
 
     .ollama-logo {
-    height: 150px;
-    display: block;
-    margin: auto;
-}
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
 }
 
 /* MÓVIL PEQUEÑO: 320px a 480px */
@@ -929,10 +955,16 @@ div.button-option:active {
     }
 
     .ollama-logo {
-    height: 140px;
-    display: block;
-    margin: auto;
-}
+        height: 140px;
+        display: block;
+        margin: auto;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
 }
 
 /* ===== Estilos para el formulario de Tarot - 3 Cartas (Amor) ===== */
