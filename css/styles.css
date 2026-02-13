@@ -882,6 +882,7 @@ div.button-option:active {
 
     main h2, h2 {
         font-size: 2.2rem;
+        color: var(--text-color-black);
     }
 
     main p, p {
