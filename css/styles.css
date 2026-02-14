@@ -1126,7 +1126,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .modal-title {
     text-align: center;
     font-size: 2.8rem;
-    color: #fff;
+    color: #fff !important;
     margin-bottom: 30px;
     text-shadow: 0 0 20px rgba(255, 111, 207, 0.5);
 }
