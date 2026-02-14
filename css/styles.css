@@ -984,6 +984,15 @@ div.button-option:active {
     font-family: var(--font-family);
     font-size: 1.6rem; /* base legible para inputs/labels */
 }
+
+#form-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color) !important;
+    text-shadow: 0 0 10px rgba(255,111,207,0.3);
+}
+
 .neon-container {
     padding: 18px;
     border-radius: 10px;
