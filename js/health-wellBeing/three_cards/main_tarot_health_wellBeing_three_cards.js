@@ -1,4 +1,4 @@
-import { selectThreeCardsRandom } from "./select_three_cards.js";
+import { selectThreeCardsRandom } from "./select-three-cards.js";
 import { getTarotistInterpretation } from "./ollamaService.js";
 
 let currentFormData = null;
