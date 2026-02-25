@@ -135,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             
-            <!-- Sección Tarotista IA -->
             <div id="tarotista-section" class="tarotista-ia-section" style="margin-top: 30px; padding: 20px; border: 2px solid #9945ff; border-radius: 10px; background: rgba(153, 69, 255, 0.05);">
                 <h3 style="color: #9945ff; margin-top: 0; display: flex; align-items: center; gap: 10px;">
                     <span>🔮</span>

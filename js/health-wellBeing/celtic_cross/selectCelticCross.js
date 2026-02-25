@@ -28,7 +28,6 @@ export async function selectCelticCrossRandom() {
             result[`pos${idx + 1}`] = { ...card, positionName: names[idx] };
         });
 
-        // También devolver array por si hace falta
         result.array = selected;
 
         return result;

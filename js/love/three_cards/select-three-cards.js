@@ -10,11 +10,9 @@ export async function selectThreeCardsRandom() {
         const cards = await response.json();
         console.log('Cartas cargadas:', cards.length);
 
-        // Seleccionar 3 cartas al azar
         const shuffled = [...cards].sort(() => Math.random() - 0.5);
         const selectedCards = shuffled.slice(0, 3);
 
-        // Mapear image_path a image para mantener compatibilidad
         const mappedCards = selectedCards.map(card => ({
             ...card,
             image: card.image_path || card.image

@@ -4,14 +4,12 @@ export async function selectCelticCrossRandom() {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const cards = await response.json();
 
-        // Barajar y tomar 10 cartas
         const shuffled = [...cards].sort(() => Math.random() - 0.5);
         const selected = shuffled.slice(0, 10).map(card => ({
             ...card,
             image: card.image_path || card.image
         }));
 
-        // Nombres de posiciones en Cruz Celta (1..10)
         const names = [
             'Presente',
             'La influencia / Obstáculo (Cruza)',
@@ -30,7 +28,6 @@ export async function selectCelticCrossRandom() {
             result[`pos${idx + 1}`] = { ...card, positionName: names[idx] };
         });
 
-        // También devolver array por si hace falta
         result.array = selected;
 
         return result;
