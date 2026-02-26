@@ -1,13 +1,13 @@
 <img src='https://github.com/GastonArielPerrone/Tu-tarot/blob/main/static/images/content/sobre_TuTarot.png' width='100%' height='300px'/>
 
-# 🔮 TuTarot – Aplicación Web de Tarot con Inteligencia Artificial
+# TuTarot – Aplicación Web de Tarot con Inteligencia Artificial
 
 **TuTarot** es una aplicación web interactiva de tarot que ofrece **lecturas personalizadas generadas por inteligencia artificial**, utilizando un **modelo de lenguaje local con Ollama**.  
 El proyecto combina simbolismo tradicional del tarot con tecnología moderna para brindar una experiencia de autoconocimiento accesible, privada y personal.
 
 ---
 
-## 🚀 Características principales
+## Características principales
 
 - Lecturas de tarot personalizadas mediante IA
 - Uso de modelos de lenguaje **locales** (Ollama)
@@ -19,7 +19,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 
 ---
 
-## 🧠 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - HTML5
 - CSS3
@@ -31,7 +31,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 
 ---
 
-## ⚙️ Requisitos para su uso
+## Requisitos para su uso
 
 Para utilizar la interpretación automática con IA es necesario:
 
@@ -44,7 +44,7 @@ Ejemplo:
 ollama run llama2
 ```
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es open source y se distribuye bajo <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/LICENSE.md">licencia MIT</a>.
 
@@ -52,13 +52,13 @@ Copyright (c) 2025
 
 Gastón Ariel Perrone
 
-## 👨‍💻 Autor
+## Autor
 
 Gastón Ariel Perrone
 
 Desarrollador de Software
 
-📍 Ciudad Atónoma de Buenos Aires, Buenos Aires, Argentina
+Ciudad Atónoma de Buenos Aires, Buenos Aires, Argentina
 
 GitHub: https://github.com/GastonArielPerrone
 
