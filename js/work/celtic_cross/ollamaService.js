@@ -21,7 +21,7 @@ export async function getTarotistInterpretation(formData, cardsData) {
 
 function buildPrompt(formData, cardsData) {
     const systemPrompt = `Eres un Tarotista experto y empático. Interpretarás la tirada Cruz Celta de forma clara y profunda.
-    Tema: Relación de pareja - Amor.`;
+    Tema: Trabajo / Empleo.`;
 
     let cardsText = '';
     for (let i = 1; i <= 10; i++) {
