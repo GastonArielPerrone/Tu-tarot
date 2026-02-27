@@ -7,6 +7,9 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 
 ---
 
+# Demo
+
+
 ## Características principales
 
 - Lecturas de tarot personalizadas mediante IA
