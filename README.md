@@ -8,7 +8,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 ---
 
 ## Screenshot
-<img src="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/static/videos/Demo/demo_readOfOneCard.gif" width="500"/>
+![Consulta de Tarot con la IA](https://github.com/GastonArielPerrone/Tu-tarot/blob/main/static/videos/Demo/demo_readOfOneCard.gif)
 
 ## Características principales
 
