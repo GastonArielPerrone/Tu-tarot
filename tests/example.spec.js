@@ -53,7 +53,7 @@ for (const [file, heading] of [
   ['pages/tarot-work.html', 'Tarot para el Trabajo'],
   ['pages/tarot-health-wellBeing.html', 'Tarot para la Salud y Bienestar'],
 ]) {
-  test(`page ${file} displays its title`, async ({ page }) => {
+  test(`Página ${file} tiene el título esperado`, async ({ page }) => {
     await page.goto(toLocal(file));
     await expect(page.locator('h1')).toContainText(heading);
   });
