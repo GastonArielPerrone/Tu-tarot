@@ -30,6 +30,7 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 - <a href="https://github.com/GastonArielPerrone/Tu-tarot/blob/main/Sobre_nuestroJSON.md">JSON</a>
 - Ollama (IA local)
 - TexToSpeech (Lectura mediante la voz)
+<<<<<<< HEAD
 - Playwright (testing)
 
 
@@ -50,6 +51,8 @@ A continuación se describen los pasos para ejecutar el conjunto de pruebas auto
 Las pruebas utilizan rutas `file://` para cargar los archivos estáticos del proyecto, por lo que no se requiere servidor adicional.
 
 
+=======
+>>>>>>> e22387d9ce86d77af7d60018526a205663f4e93c
 ---
 
 ## Requisitos para su uso
