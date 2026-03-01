@@ -32,6 +32,24 @@ El proyecto combina simbolismo tradicional del tarot con tecnología moderna par
 - TexToSpeech (Lectura mediante la voz)
 - Playwright (testing)
 
+
+### Ejecutar pruebas con Playwright
+
+A continuación se describen los pasos para ejecutar el conjunto de pruebas automatizadas:
+
+1. Instalar dependencias (si no se hizo aún):
+   ```bash
+   npm install
+   npx playwright install
+   ```
+2. Lanzar los tests:
+   ```bash
+   npx playwright test
+   ```
+
+Las pruebas utilizan rutas `file://` para cargar los archivos estáticos del proyecto, por lo que no se requiere servidor adicional.
+
+
 ---
 
 ## Requisitos para su uso
